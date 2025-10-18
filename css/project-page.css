@@ -119,6 +119,9 @@
         transition: transform 0.2s ease-in-out;
     }
 
+        
+
+
     .arrow-left {
         left: 5%; /* Position on the left side */
     }
@@ -541,11 +544,14 @@ img {
     }
 
 /* NAVIGATION ARROWS*/
-    .arrow-button:hover {
-        transform: translateY(-50%) scale(1.1); /* Slight zoom on hover */
-    }
+.arrow-button:hover {
+    transform: translateY(-50%) scale(1.1); /* Slight zoom on hover */
+}
 
-    .arrow-button img {
-        width: 60%; /* Arrow image takes 60% of button size */
-        height: auto;
-    }
+.arrow-button img {
+    width: 60%; /* Arrow image takes 60% of button size */
+    height: auto;
+    display: block;
+    margin: auto;
+    transition: transform 0.2s ease-in-out;
+}
