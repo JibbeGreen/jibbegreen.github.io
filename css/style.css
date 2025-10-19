@@ -301,8 +301,8 @@ header.index-header {
 }
 
 .index-about-image {
-    max-width: 17rem; /* Maintain the 2:1 aspect ratio */
-    height: 17rem; /* Maintain 2:1 aspect ratio */
+    max-width: 30rem; /* Maintain the 2:1 aspect ratio */
+    height: 30rem; /* Maintain 2:1 aspect ratio */
     object-fit: cover; /* Ensure the image fills the circle while maintaining its aspect ratio */
     object-position: center top;
     object-position: center 20%;
