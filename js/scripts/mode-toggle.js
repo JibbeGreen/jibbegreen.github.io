@@ -13,9 +13,26 @@
         if (toggleButton) {
             console.log("✅ Theme toggle button found! Adding event listener.");
 
+            const updateIcon = (isDark) => {
+                const img = toggleButton.querySelector("img");
+                if (img) {
+                    // If Dark Mode (isDark is true) -> Show Sun (to switch to Light)
+                    // If Light Mode (isDark is false) -> Show Moon (to switch to Dark)
+                    img.src = isDark ? "assets/images/icons/sun.svg" : "assets/images/icons/moon.png";
+                    img.alt = isDark ? "Light Mode" : "Dark Mode";
+                    img.title = isDark ? "Switch to Light Mode" : "Switch to Dark Mode";
+                }
+            };
+
+            // Initialize icon based on current state
+            updateIcon(document.body.classList.contains("dark-mode"));
+
             toggleButton.addEventListener("click", () => {
                 document.body.classList.toggle("dark-mode");
                 const isDarkMode = document.body.classList.contains("dark-mode");
+
+                // Update Icon
+                updateIcon(isDarkMode);
 
                 // Save the theme preference to localStorage
                 localStorage.setItem("theme", isDarkMode ? "dark" : "light");
