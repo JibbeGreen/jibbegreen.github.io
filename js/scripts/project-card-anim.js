@@ -91,12 +91,8 @@
             this.cards.forEach(card => (card.style.pointerEvents = "none"));
         }
 
-        let firstCard = this.cards[0];
-        let firstCardLeft = parseFloat(firstCard.style.left);
-
-        if (firstCardLeft + deltaX > 0) {
-            deltaX = -firstCardLeft;
-        }
+        // Remove the block that prevents dragging right (lines 97-99 were here)
+        // We allow tracking in both directions now.
 
         this.cards.forEach(card => {
             let currentX = parseFloat(card.style.left);
@@ -105,7 +101,7 @@
 
         this.lastMouseX = event.clientX;
 
-        this.checkAndRecycleCards();
+        this.checkAndRecycleCards(deltaX);
     }
 
     stopDrag(event) {
@@ -124,17 +120,47 @@
         }
     }
 
-    checkAndRecycleCards() {
-        let firstCard = this.cards[0];
-        if (parseFloat(firstCard.style.left) + this.cardWidth < 0) {
-            this.recycleCard(firstCard);
+    checkAndRecycleCards(deltaX = 0) {
+        // Safety allows us to break infinite loops if layout logic fails
+        const maxRecycles = this.cards.length;
+
+        // 1. Recycle Left -> Right (Standard Infinite Scroll)
+        // If the first card goes off-screen to the left, move it to the end.
+        let safety = 0;
+        while (parseFloat(this.cards[0].style.left) + this.cardWidth < 0 && safety < maxRecycles) {
+            this.recycleCardLeftToRight(this.cards[0]);
+            safety++;
+        }
+
+        // 2. Recycle Right -> Left (When Dragging Right)
+        // Check if we need to fill space on the left.
+        // We trigger if the first card is anywhere within the first card-width of space or inside the screen,
+        // suggesting a drag right is exposing the left void.
+        safety = 0;
+        // We check 'deltaX > 0' to prioritize this logic during right-drag interactions.
+        // We check '>-this.cardWidth' to be aggressive about filling the left gap.
+        if (deltaX > 0) {
+            while (
+                parseFloat(this.cards[0].style.left) > -this.cardWidth &&
+                parseFloat(this.cards[this.cards.length - 1].style.left) >= window.innerWidth &&
+                safety < maxRecycles
+            ) {
+                this.recycleCardRightToLeft(this.cards[this.cards.length - 1]);
+                safety++;
+            }
         }
     }
 
-    recycleCard(card) {
+    recycleCardLeftToRight(card) {
         let lastCard = this.cards[this.cards.length - 1];
         card.style.left = `${parseFloat(lastCard.style.left) + this.cardWidth}px`;
         this.cards.push(this.cards.shift());
+    }
+
+    recycleCardRightToLeft(card) {
+        let firstCard = this.cards[0];
+        card.style.left = `${parseFloat(firstCard.style.left) - this.cardWidth}px`;
+        this.cards.unshift(this.cards.pop());
     }
 }
 
