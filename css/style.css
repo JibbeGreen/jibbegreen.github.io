@@ -260,31 +260,35 @@ header.index-header {
 
 /* Keyframes for background fading */
 @keyframes fadeBackground {
-    0%, 16.66% {
+        0%, 14.1571% {
         background-image: url('../assets/images/phobophobia/banner.jpg');
     }
 
-    16.67%, 33.33% {
+    14.1571%, 28.3143% {
         background-image: url('../assets/images/revenge-of-the-renter/banner.jpg');
     }
 
-    33.34%, 49.99% {
+    28.3143%, 42.4714% {
         background-image: url('../assets/images/mechmates/banner.jpg');
     }
 
-    50%, 66.66% {
+    42.4714%, 56.6286% {
         background-image: url('../assets/images/the-news/banner.jpg');
     }
 
-    66.67%, 83.33% {
+    56.6286%, 70.7857% {
         background-image: url('../assets/images/noorderpoort/banner.jpg');
     }
 
-    83.34%, 99.9% {
+    70.7857%, 84.9429% {
         background-image: url('../assets/images/project-parasite/banner.jpg');
     }
 
-    99.91%, 100% {
+    84.9429%, 99.1% {
+        background-image: url('../assets/images/disobey-me/banner2.jpg');
+    }
+
+    99.1%, 100% {
         background-image: url('../assets/images/phobophobia/banner.jpg');
     }
 }
