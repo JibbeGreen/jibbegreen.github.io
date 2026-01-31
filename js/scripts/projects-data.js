@@ -54,5 +54,13 @@
         blurb: "A reverse‑horror game about escaping a secret facility by possessing hosts.",
         tags: ["3D", "Artist", "GameDesigner", "Programmer", "Unity", "Personal"],
         dataTags: "3D Artist GameDesigner Programmer Unity Personal"
+    },
+    {
+        title: "(Dis)Obey Me",
+        slug: "disobey-me",
+        banner: "assets/images/disobey-me/banner.jpg",
+        blurb: "A puzzle game about defying your creators orders.",
+        tags: ["3D", "Artist", "GameDesigner", "Programmer", "Unity", "Personal", "GameJam"],
+        dataTags: "3D Artist GameDesigner Programmer Unity Personal GameJam"
     }
 ];

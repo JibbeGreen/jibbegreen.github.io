@@ -58,6 +58,7 @@
 
     .phobophobia-header,
     .project-parasite-header,
+    .disobey-me-header,
     .revenge-of-the-renter-header,
     .mechmates-header,
     .the-news-header,
@@ -147,6 +148,7 @@
 
     .phobophobia-header,
     .project-parasite-header,
+    .disobey-me-header,
     .revenge-of-the-renter-header,
     .mechmates-header,
     .the-news-header,
@@ -456,6 +458,7 @@ img {
     /* Image centring, max height styling, and white glow */
     .phobophobia-header img,
     .project-parasite-header img,
+    .disobey-me-header img,
     .revenge-of-the-renter-header img,
     .mechmates-header img,
     .the-news-header img,
@@ -502,9 +505,14 @@ img {
     background-image: url('../assets/images/skill-tree/banner.jpg');
 }
 
-/* Background for The News */
+/* Background for Project Parasite */
 .project-parasite-header {
     background-image: url('../assets/images/project-parasite/banner.jpg');
+}
+
+/* Background for Disobey Me */
+.disobey-me-header {
+    background-image: url('../assets/images/disobey-me/banner2.jpg');
 }
 
     /* Overlay with slight black */
@@ -514,6 +522,7 @@ img {
     .the-news-header::before,
     .noorderpoort-header::before,
     .skill-tree-header::before,
+    .disobey-me-header::before,
     .project-parasite-header::before {
         content: ''; /* Empty content for the pseudo-element */
         position: absolute;
@@ -531,6 +540,7 @@ img {
     .revenge-of-the-renter-header h1,
     .mechmates-header h1,
     .the-news-header h1,
+    .disobey-me-header h1,
     .noorderpoort-header h1,
     .phobophobia-header p,
     .project-parasite-header p,
@@ -538,6 +548,7 @@ img {
     .mechmates-header p,
     .the-news-header p,
     .noorderpoort-header p,
+    .disobey-me-header p,
     .skill-tree-header {
         position: relative;
         z-index: 2; /* Ensure text is above the overlay */
