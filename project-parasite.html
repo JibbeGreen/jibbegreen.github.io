@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,7 @@
     <link rel="stylesheet" href="css/project-page.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/csharp.min.js"></script>
     <script>hljs.highlightAll();</script>
@@ -22,6 +22,7 @@
     <script src="/js/scripts/expandable-section.js" defer></script>
     <script src="/js/scripts/mode-toggle.js" defer></script>
 </head>
+
 <body>
 
     <div id="nav-placeholder"></div>
@@ -49,50 +50,56 @@
         <main>
             <aside class="project-sidebar">
                 <dl class="project-details">
-                    <dt>PROJECT STATUS:</dt>
+                    <dt><img src="assets/images/icons/status.svg" alt="" class="detail-icon">STATUS:</dt>
                     <dd>ONGOING</dd>
-                    <dt>PROJECT TYPE:</dt>
+                    <dt><img src="assets/images/icons/type.svg" alt="" class="detail-icon">TYPE:</dt>
                     <dd>PERSONAL</dd>
-                    <dt>PROJECT DURATION:</dt>
+                    <dt><img src="assets/images/icons/duration.svg" alt="" class="detail-icon">DURATION:</dt>
                     <dd>8 AUGUST 2024 - 31 JANUARY 2025</dd>
-                    <dt>SOFTWARE USED:</dt>
+                    <dt><img src="assets/images/icons/tool.png" alt="" class="detail-icon">SOFTWARE USED:</dt>
                     <dd>UNITY</dd>
-                    <dt>LANGUAGES USED:</dt>
+                    <dt><img src="assets/images/icons/languages.svg" alt="" class="detail-icon">LANGUAGES USED:</dt>
                     <dd>C#</dd>
-                    <dt>PRIMARY ROLE(S):</dt>
+                    <dt><img src="assets/images/icons/role.svg" alt="" class="detail-icon">PRIMARY ROLE(S):</dt>
                     <dd>ALL</dd>
-                    <dt>TEAM SIZE:</dt>
+                    <dt><img src="assets/images/icons/team.png" alt="" class="detail-icon">TEAM SIZE:</dt>
                     <dd>1</dd>
                 </dl>
             </aside>
 
             <div class="content-wrapper">
-                <iframe width="560" 
-                        height="315" 
-                        src="https://www.youtube-nocookie.com/embed/_YRjZhuRAcs?si=bNgFcqPu92RFM2wU" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
+                <iframe width="560" height="315"
+                    src="https://www.youtube-nocookie.com/embed/_YRjZhuRAcs?si=bNgFcqPu92RFM2wU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
 
-                <br/>
+                <br />
 
                 <div class="social-buttons">
-                    <a href="https://github.com/JibbeGreen/ProjectParasite" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <a href="https://github.com/JibbeGreen/ProjectParasite" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
                         <img src="assets/images/icons/github.png" alt="GitHub Icon" title="GitHub">
                     </a>
-                    <a href="https://greenygamedev.itch.io" target="_blank" rel="noopener noreferrer" aria-label="Itch.io">
+                    <a href="https://greenygamedev.itch.io" target="_blank" rel="noopener noreferrer"
+                        aria-label="Itch.io">
                         <img src="assets/images/icons/itchio.png" alt="Itch.io Icon" title="Itch.io">
                     </a>
                 </div>
 
-                <br/>
+                <br />
 
                 <div class="text-wrapper">
-                    <p>In a top-secret government facility, unethical experiments on living creatures take a dark turn when a sudden power outage disrupts containment. Among the test subjects, a genetically modified <strong>hookworm parasite</strong> (the player) seizes the moment and escapes before lockdown is restored. Now, it must fight for survival.</p>
-                    <p>Using its unique ability to <strong>possess living hosts</strong>, the parasite infiltrates the facility, commandeering staff and experimental creatures to navigate high-security areas, disable defences, and outwit enemies. Each encounter demands a mix of <strong>stealth, combat, and puzzle-solving</strong>, challenging players to think strategically and adapt on the fly.</p>
+                    <p>In a top-secret government facility, unethical experiments on living creatures take a dark turn
+                        when a sudden power outage disrupts containment. Among the test subjects, a genetically modified
+                        <strong>hookworm parasite</strong> (the player) seizes the moment and escapes before lockdown is
+                        restored. Now, it must fight for survival.</p>
+                    <p>Using its unique ability to <strong>possess living hosts</strong>, the parasite infiltrates the
+                        facility, commandeering staff and experimental creatures to navigate high-security areas,
+                        disable defences, and outwit enemies. Each encounter demands a mix of <strong>stealth, combat,
+                            and puzzle-solving</strong>, challenging players to think strategically and adapt on the
+                        fly.</p>
                 </div> <!--text wrapper-->
 
                 <button onclick="window.open('assets/images/project-parasite/Project-Parasite_GDD.pdf', '_blank');">
@@ -108,15 +115,18 @@
                             <img class="expand-icon" src="assets/images/icons/arrow-down.png" alt="Expand">
                         </button>
                         <div class="expandable-content">
-                            <p>The main mechanic of Project Parasite is the parasite's ability to infect and posses other creatures.</p>
-                            <br/>
-                            <p>To achieve this I setup an actor system which has an Actor script on each playable object, which all have their own id and afiliation.</p>
-                            <br/>
+                            <p>The main mechanic of Project Parasite is the parasite's ability to infect and posses
+                                other creatures.</p>
+                            <br />
+                            <p>To achieve this I setup an actor system which has an Actor script on each playable
+                                object, which all have their own id and afiliation.</p>
+                            <br />
                             <p>To manage these I setup an ActorManager, which I can use to access these actors.</p>
-                            <p>Besides this I made an ActorFacade script which takes in all the important variables and triggers the logic for the parasite swapping an actor.</p>
+                            <p>Besides this I made an ActorFacade script which takes in all the important variables and
+                                triggers the logic for the parasite swapping an actor.</p>
 
                             <button class="expandable-button"
-                                    onclick="toggleContent(this,'project-parasite/actor-facade.cs')">
+                                onclick="toggleContent(this,'project-parasite/actor-facade.cs')">
                                 <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                 CODE SNIPPET - ActorFacade
                                 <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -131,9 +141,11 @@
                             <img class="expand-icon" src="assets/images/icons/arrow-down.png" alt="Expand">
                         </button>
                         <div class="expandable-content">
-                            <p>Project Parasite uses Additive Scene Loading for making sure the actors stay in their respective spot when loading another level, and deloads and loads levels depending on which level the player is in to limit the assets to load, thus boosting performance.</p>
+                            <p>Project Parasite uses Additive Scene Loading for making sure the actors stay in their
+                                respective spot when loading another level, and deloads and loads levels depending on
+                                which level the player is in to limit the assets to load, thus boosting performance.</p>
                             <button class="expandable-button"
-                                    onclick="toggleContent(this,'project-parasite/scene-load-trigger.cs')">
+                                onclick="toggleContent(this,'project-parasite/scene-load-trigger.cs')">
                                 <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                 CODE SNIPPET - SceneLoadTrigger
                                 <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -148,8 +160,10 @@
                             <img class="expand-icon" src="assets/images/icons/arrow-down.png" alt="Expand">
                         </button>
                         <div class="expandable-content">
-                            <p>I used Cinemachine 2.0 (the newest version at the time of starting the project), to set up the third-person camera for the parasite and hosts.</p>
-                            <p>And extended on this system with my own Camera Switcher code, which sets the camera's priority and enables/disables based on the which character is currently infected.</p>
+                            <p>I used Cinemachine 2.0 (the newest version at the time of starting the project), to set
+                                up the third-person camera for the parasite and hosts.</p>
+                            <p>And extended on this system with my own Camera Switcher code, which sets the camera's
+                                priority and enables/disables based on the which character is currently infected.</p>
                         </div>
                     </div>
 
@@ -159,10 +173,13 @@
                             <img class="expand-icon" src="assets/images/icons/arrow-down.png" alt="Expand">
                         </button>
                         <div class="expandable-content">
-                            <p>The desctruction logic plays a big part in the game as the player can destroy vents, and shatter incubation pods, creating new paths to areas previously inaccessible.</p>
-                            <p>I made a modular script, with custom editor, which lets you easily adjust the parameters in the inspector (e.g. Do you want the children of the instantiated destroyedObject to self destruct). </p>
+                            <p>The desctruction logic plays a big part in the game as the player can destroy vents, and
+                                shatter incubation pods, creating new paths to areas previously inaccessible.</p>
+                            <p>I made a modular script, with custom editor, which lets you easily adjust the parameters
+                                in the inspector (e.g. Do you want the children of the instantiated destroyedObject to
+                                self destruct). </p>
                             <button class="expandable-button"
-                                    onclick="toggleContent(this,'project-parasite/destructible-object.cs')">
+                                onclick="toggleContent(this,'project-parasite/destructible-object.cs')">
                                 <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                 CODE SNIPPET - DestructibleObject
                                 <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -177,8 +194,11 @@
                             <img class="expand-icon" src="assets/images/icons/arrow-down.png" alt="Expand">
                         </button>
                         <div class="expandable-content">
-                            <p>One of the puzzle components of the game comes down to the doors of which some needs a person with a keycard to open it.</p>
-                            <p>It has a nice animation of the doors slide out and inwards. And there is a child script for the elevator door which has prerequisites for it to be able to open, displayed by the text outside the door.</p>
+                            <p>One of the puzzle components of the game comes down to the doors of which some needs a
+                                person with a keycard to open it.</p>
+                            <p>It has a nice animation of the doors slide out and inwards. And there is a child script
+                                for the elevator door which has prerequisites for it to be able to open, displayed by
+                                the text outside the door.</p>
                         </div>
                     </div>
 
@@ -191,7 +211,7 @@
                             <!--<p>The Enemy AI plays a very important part in the game, as they should act naturally like an enemy, but should also be controllable.</p>-->
                             <!--Enemy AI Script-->
                             <button class="expandable-button"
-                                    onclick="toggleContent(this,'project-parasite/enemy-ai.cs')">
+                                onclick="toggleContent(this,'project-parasite/enemy-ai.cs')">
                                 <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                 CODE SNIPPET - EnemyAI
                                 <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -200,7 +220,7 @@
 
                             <!--PatrolAgent Script-->
                             <button class="expandable-button"
-                                    onclick="toggleContent(this,'project-parasite/patrol-agent.cs')">
+                                onclick="toggleContent(this,'project-parasite/patrol-agent.cs')">
                                 <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                 CODE SNIPPET - Patrol Agent
                                 <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -209,7 +229,7 @@
 
                             <!--PatrolPath Script-->
                             <button class="expandable-button"
-                                    onclick="toggleContent(this,'project-parasite/patrol-path.cs')">
+                                onclick="toggleContent(this,'project-parasite/patrol-path.cs')">
                                 <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                 CODE SNIPPET - Patrol Path
                                 <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -224,10 +244,12 @@
                             <img class="expand-icon" src="assets/images/icons/arrow-down.png" alt="Expand">
                         </button>
                         <div class="expandable-content">
-                            <p>To add a layer of stealth and another puzzle element I added security camera's, which pan around and when the player comes into its cone shape, an alarm gets set trigger the geared Enemy AI to patrol to the player's last seen location.</p>
+                            <p>To add a layer of stealth and another puzzle element I added security camera's, which pan
+                                around and when the player comes into its cone shape, an alarm gets set trigger the
+                                geared Enemy AI to patrol to the player's last seen location.</p>
                             <!--PatrolPath Script-->
                             <button class="expandable-button"
-                                    onclick="toggleContent(this,'project-parasite/security-camera.cs')">
+                                onclick="toggleContent(this,'project-parasite/security-camera.cs')">
                                 <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                 CODE SNIPPET - Security Camera
                                 <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -242,7 +264,8 @@
                             <img class="expand-icon" src="assets/images/icons/arrow-down.png" alt="Expand">
                         </button>
                         <div class="expandable-content">
-                            <a href="https://www.artstation.com/jibbew" target="_blank" rel="noopener noreferrer">To Be Added On ArtStation.</a>
+                            <a href="https://www.artstation.com/jibbew" target="_blank" rel="noopener noreferrer">To Be
+                                Added On ArtStation.</a>
                         </div>
                     </div>
                 </div> <!-- contributions -->
@@ -253,6 +276,7 @@
     <div id="footer-placeholder"></div>
 
 </body>
+
 </html>
 
 <!-- IDK IF I SHOULD THIS TYPE OF INFO
