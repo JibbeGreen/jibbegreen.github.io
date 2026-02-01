@@ -5,18 +5,22 @@
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
         border-radius: 0 0 10px 10px;
         max-width: 22vw;
-        position: absolute; /* Take it out of document flow */
-        top: 0; /* Align to the top */
-        right: 0; /* Align to the right inside .main-wrapper */
+        position: absolute;
+        /* Take it out of document flow */
+        top: 0;
+        /* Align to the top */
+        right: 0;
+        /* Align to the right inside .main-wrapper */
     }
 
     .arrow-button {
         position: fixed;
         top: 50%;
         transform: translateY(-50%);
-        width: 5vw; 
+        width: 5vw;
         height: 5vw;
-        background-color: #f0f0f0; /* Light grey background */
+        background-color: #f0f0f0;
+        /* Light grey background */
         border: none;
         border-radius: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -29,16 +33,20 @@
     }
 
     .arrow-left {
-        left: 2px; /* Position on the left side */
+        left: 2px;
+        /* Position on the left side */
     }
 
     .arrow-right {
-        right: 2px; /* Position on the right side */
+        right: 2px;
+        /* Position on the right side */
     }
 
     iframe {
-        width: 100%; /* Fixed width */
-        height: 50%; /* Fixed height */
+        width: 100%;
+        /* Fixed width */
+        height: 50%;
+        /* Fixed height */
         border-radius: 10px;
     }
 
@@ -52,7 +60,8 @@
     }
 
     .expandable-container {
-        width: auto; /* Set a fixed width */
+        width: auto;
+        /* Set a fixed width */
         margin-bottom: 5px;
     }
 
@@ -64,10 +73,12 @@
     .the-news-header,
     .skill-tree-header,
     .noorderpoort-header {
-        position: relative; /* Ensure the overlay is positioned correctly */
+        position: relative;
+        /* Ensure the overlay is positioned correctly */
         background-size: cover;
         background-position: center;
-        color: white; /* Make sure text is readable on dark overlay */
+        color: white;
+        /* Make sure text is readable on dark overlay */
         height: 70vw;
     }
 
@@ -80,7 +91,8 @@
     }
 
     .expandable-container {
-        width: 100%; /* Set a fixed width */
+        width: 100%;
+        /* Set a fixed width */
     }
 }
 
@@ -97,9 +109,12 @@
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
         border-radius: 0 0 10px 10px;
         max-width: 20rem;
-        position: absolute; /* Take it out of document flow */
-        top: 0; /* Align to the top */
-        right: 0; /* Align to the right inside .main-wrapper */
+        position: absolute;
+        /* Take it out of document flow */
+        top: 0;
+        /* Align to the top */
+        right: 0;
+        /* Align to the right inside .main-wrapper */
     }
 
     .arrow-button {
@@ -108,7 +123,8 @@
         transform: translateY(-50%);
         width: 2vw;
         height: 2vw;
-        background-color: #f0f0f0; /* Light grey background */
+        background-color: #f0f0f0;
+        /* Light grey background */
         border: none;
         border-radius: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -120,23 +136,27 @@
         transition: transform 0.2s ease-in-out;
     }
 
-        
+
 
 
     .arrow-left {
-        left: 5%; /* Position on the left side */
+        left: 5%;
+        /* Position on the left side */
     }
 
     .arrow-right {
-        right: 5%; /* Position on the right side */
+        right: 5%;
+        /* Position on the right side */
     }
 
     iframe {
-        width: 560px; /* Fixed width */
-        height: 315px; /* Fixed height */
+        width: 560px;
+        /* Fixed width */
+        height: 315px;
+        /* Fixed height */
         border-radius: 10px;
     }
-    
+
     /* Sidebar details formatting */
     .project-sidebar .project-details {
         display: grid;
@@ -154,10 +174,12 @@
     .the-news-header,
     .skill-tree-header,
     .noorderpoort-header {
-        position: relative; /* Ensure the overlay is positioned correctly */
+        position: relative;
+        /* Ensure the overlay is positioned correctly */
         background-size: cover;
         background-position: center;
-        color: white; /* Make sure text is readable on dark overlay */
+        color: white;
+        /* Make sure text is readable on dark overlay */
         height: 20vh;
     }
 
@@ -166,7 +188,8 @@
     }
 
     .expandable-container {
-        width: 50vw; /* Set a fixed width */
+        width: 50vw;
+        /* Set a fixed width */
     }
 }
 
@@ -207,12 +230,12 @@
     position: relative;
 }
 
-    /* When zoomed in */
-    #overlay-image.zoomed {
-        cursor: zoom-out !important;
-        max-width: none;
-        max-height: none;
-    }
+/* When zoomed in */
+#overlay-image.zoomed {
+    cursor: zoom-out !important;
+    max-width: none;
+    max-height: none;
+}
 
 /* Close button */
 .close-button {
@@ -241,19 +264,23 @@
     z-index: 3;
 }
 
-    /* Hover effect */
-    .close-button:hover {
-        background: #ff4444;
-        color: white;
-        transform: scale(1.1);
-    }
+/* Hover effect */
+.close-button:hover {
+    background: #ff4444;
+    color: white;
+    transform: scale(1.1);
+}
 
 
 .project-logo {
-    max-height: 100px; /* Limit the maximum height */
-    width: auto; /* Adjust the width proportionally */
-    display: block; /* Prevent inline element spacing issues */
-    margin: 0 auto; /* Center the image horizontally */
+    max-height: 100px;
+    /* Limit the maximum height */
+    width: auto;
+    /* Adjust the width proportionally */
+    display: block;
+    /* Prevent inline element spacing issues */
+    margin: 0 auto;
+    /* Center the image horizontally */
 }
 
 .expandable-container {
@@ -277,19 +304,22 @@
 }
 
 .line-number {
-    width: 3em; /* reserve space for 3‑digit lines */
+    width: 3em;
+    /* reserve space for 3‑digit lines */
     text-align: right;
     margin-right: 1em;
     user-select: none;
     opacity: 0.4;
-    color: #888; /* line‑number color */
+    color: #888;
+    /* line‑number color */
     flex-shrink: 0;
 }
 
-    .line-number + span {
-        white-space: pre-wrap; /* preserve wrapping of code lines */
-        flex: 1;
-    }
+.line-number+span {
+    white-space: pre-wrap;
+    /* preserve wrapping of code lines */
+    flex: 1;
+}
 
 /* Expandable Button */
 .expandable-button {
@@ -307,9 +337,12 @@
     margin-bottom: 5px;
     box-sizing: border-box;
 
-    align-items: center; /* Vertically center the text + icon */
-    justify-content: space-between; /* Push icon to far right */
-    gap: 0.5em; /* Optional: spacing between text & icon */
+    align-items: center;
+    /* Vertically center the text + icon */
+    justify-content: space-between;
+    /* Push icon to far right */
+    gap: 0.5em;
+    /* Optional: spacing between text & icon */
 }
 
 .expandable-content {
@@ -317,16 +350,18 @@
     padding: 10px;
     border-radius: 5px;
     display: none;
-    width: 100%; /* Matches button width */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    width: 100%;
+    /* Matches button width */
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect width */
 }
 
-    .expandable-content .content-image {
-        width: 100%;
-        max-width: 600px;
-        margin-top: 10px;
-        border-radius: 5px;
-    }
+.expandable-content .content-image {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
 
 .snippet-icon {
     height: 2vh;
@@ -350,46 +385,71 @@
 
 .project-container {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Two columns: content on the left, sidebar on the right */
+    grid-template-columns: 2fr 1fr;
+    /* Two columns: content on the left, sidebar on the right */
     grid-template-areas:
-        "content sidebar"; /* Ensures sidebar is always on the right */
-    gap: 2rem; /* Adds spacing between the sections */
-    align-items: start; /* Aligns items to the top */
+        "content sidebar";
+    /* Ensures sidebar is always on the right */
+    gap: 2rem;
+    /* Adds spacing between the sections */
+    align-items: start;
+    /* Aligns items to the top */
 }
 
 /* Align stuff to da left */
 .content-wrapper {
-    grid-area: content; /* Assigns to the content area */
+    grid-area: content;
+    /* Assigns to the content area */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Ensures everything aligns left */
-} 
+    align-items: flex-start;
+    /* Ensures everything aligns left */
+}
 
-    .content-wrapper img {
-        border-radius: 1rem;
-        max-width: 50%;
-    }
+.content-wrapper img {
+    border-radius: 1rem;
+    max-width: 50%;
+}
 
 /* Media container for the iframe */
 .media-container {
-    width: 100%; /* Ensures it stretches within the content */
+    width: 100%;
+    /* Ensures it stretches within the content */
     display: flex;
-    justify-content: flex-start; /* Aligns video to the left */
+    justify-content: flex-start;
+    /* Aligns video to the left */
 }
 
 .main-wrapper {
-    position: relative; /* Establishes a positioning context */
-    max-width: var(--recontent-width); /* Adjust to match your layout */
-    margin: 0 auto; /* Center the wrapper */
-    padding: 2rem; /* Ensure content has space */
+    position: relative;
+    /* Establishes a positioning context */
+    max-width: var(--recontent-width);
+    /* Adjust to match your layout */
+    margin: 0 auto;
+    /* Center the wrapper */
+    padding: 2rem;
+    /* Ensure content has space */
 
     display: flex;
-    justify-content: space-between; /* Space out the sidebar and content */
+    justify-content: space-between;
+    /* Space out the sidebar and content */
 }
 
 .project-details dt {
     font-weight: bold;
     text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-top: 0.1rem;
+    /* Tiny adjustment to align icon with text cap height */
+}
+
+.detail-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+    /* Optional: add a tint if needed, but white SVGs work well on dark cards */
 }
 
 .project-details dd {
@@ -400,48 +460,55 @@
 
 /* Social Buttons */
 .social-buttons {
-    display: inline-flex; /* Or inline-block */
+    display: inline-flex;
+    /* Or inline-block */
     width: fit-content;
     max-width: 100%;
     justify-content: center;
     gap: 1.25vh;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
-    .social-buttons a {
-        display: inline-flex;
-        position: relative;
-        width: 3.75rem;
-        height: 3.75rem;
-        justify-content: center;
-        align-items: center;
-        background-color: white; /* White circular background */
-        border-radius: 100%;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        overflow: hidden; /* Ensure the icon stays within the circle */
-    }
+.social-buttons a {
+    display: inline-flex;
+    position: relative;
+    width: 3.75rem;
+    height: 3.75rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    /* White circular background */
+    border-radius: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    /* Ensure the icon stays within the circle */
+}
 
-        .social-buttons a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-        }
+.social-buttons a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
 
-        .social-buttons a img {
-            width: 60%; /* Adjust icon size to fit nicely in the circle */
-            height: auto;
-            transition: filter 0.3s ease; /* Smooth transition for filter */
-            filter: brightness(0) saturate(100%);
-            /* This creates a greenish color effect */
-        }
+.social-buttons a img {
+    width: 60%;
+    /* Adjust icon size to fit nicely in the circle */
+    height: auto;
+    transition: filter 0.3s ease;
+    /* Smooth transition for filter */
+    filter: brightness(0) saturate(100%);
+    /* This creates a greenish color effect */
+}
 
-        .social-buttons a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 .625vw rgba(255, 255, 255, 0.7);
-        }
+.social-buttons a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 .625vw rgba(255, 255, 255, 0.7);
+}
 
-            /* Apply filter effect on the image inside the anchor tag when hovering over the button */
-            .social-buttons a:hover img {
-                filter: none;
-            }
+/* Apply filter effect on the image inside the anchor tag when hovering over the button */
+.social-buttons a:hover img {
+    filter: none;
+}
 
 /* Contributions section */
 .contributions {
@@ -455,25 +522,28 @@ img {
     max-width: var(--recontent-width);
 }
 
-    /* Image centring, max height styling, and white glow */
-    .phobophobia-header img,
-    .project-parasite-header img,
-    .disobey-me-header img,
-    .revenge-of-the-renter-header img,
-    .mechmates-header img,
-    .the-news-header img,
-    .skill-tree-header img,
-    .noorderpoort-header img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Center the image horizontally and vertically */
-        max-height: 50%; /* Restrict the height to % of the header */
-        width: auto; /* Maintain the aspect ratio */
-        filter: drop-shadow(0 0 1vw rgba(0, 0, 0, 1));
-        margin-top: 3.5vh;
-        z-index: 2;
-    }
+/* Image centring, max height styling, and white glow */
+.phobophobia-header img,
+.project-parasite-header img,
+.disobey-me-header img,
+.revenge-of-the-renter-header img,
+.mechmates-header img,
+.the-news-header img,
+.skill-tree-header img,
+.noorderpoort-header img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the image horizontally and vertically */
+    max-height: 50%;
+    /* Restrict the height to % of the header */
+    width: auto;
+    /* Maintain the aspect ratio */
+    filter: drop-shadow(0 0 1vw rgba(0, 0, 0, 1));
+    margin-top: 3.5vh;
+    z-index: 2;
+}
 
 /* Background for Phobophobia */
 .phobophobia-header {
@@ -515,52 +585,58 @@ img {
     background-image: url('../assets/images/disobey-me/banner2.jpg');
 }
 
-    /* Overlay with slight black */
-    .phobophobia-header::before,
-    .revenge-of-the-renter-header::before,
-    .mechmates-header::before,
-    .the-news-header::before,
-    .noorderpoort-header::before,
-    .skill-tree-header::before,
-    .disobey-me-header::before,
-    .project-parasite-header::before {
-        content: ''; /* Empty content for the pseudo-element */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Transparent black overlay */
-        z-index: 1; /* Ensure overlay is on top of the background */
-    }
+/* Overlay with slight black */
+.phobophobia-header::before,
+.revenge-of-the-renter-header::before,
+.mechmates-header::before,
+.the-news-header::before,
+.noorderpoort-header::before,
+.skill-tree-header::before,
+.disobey-me-header::before,
+.project-parasite-header::before {
+    content: '';
+    /* Empty content for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Transparent black overlay */
+    z-index: 1;
+    /* Ensure overlay is on top of the background */
+}
 
-    /* Ensure text appears above the overlay */
-    .phobophobia-header h1,
-    .project-parasite-header h1,
-    .revenge-of-the-renter-header h1,
-    .mechmates-header h1,
-    .the-news-header h1,
-    .disobey-me-header h1,
-    .noorderpoort-header h1,
-    .phobophobia-header p,
-    .project-parasite-header p,
-    .revenge-of-the-renter-header p,
-    .mechmates-header p,
-    .the-news-header p,
-    .noorderpoort-header p,
-    .disobey-me-header p,
-    .skill-tree-header {
-        position: relative;
-        z-index: 2; /* Ensure text is above the overlay */
-    }
+/* Ensure text appears above the overlay */
+.phobophobia-header h1,
+.project-parasite-header h1,
+.revenge-of-the-renter-header h1,
+.mechmates-header h1,
+.the-news-header h1,
+.disobey-me-header h1,
+.noorderpoort-header h1,
+.phobophobia-header p,
+.project-parasite-header p,
+.revenge-of-the-renter-header p,
+.mechmates-header p,
+.the-news-header p,
+.noorderpoort-header p,
+.disobey-me-header p,
+.skill-tree-header {
+    position: relative;
+    z-index: 2;
+    /* Ensure text is above the overlay */
+}
 
 /* NAVIGATION ARROWS*/
 .arrow-button:hover {
-    transform: translateY(-50%) scale(1.1); /* Slight zoom on hover */
+    transform: translateY(-50%) scale(1.1);
+    /* Slight zoom on hover */
 }
 
 .arrow-button img {
-    width: 60%; /* Arrow image takes 60% of button size */
+    width: 60%;
+    /* Arrow image takes 60% of button size */
     height: auto;
     display: block;
     margin: auto;
