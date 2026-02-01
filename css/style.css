@@ -1,9 +1,10 @@
-
 /* WIDE SCREENS */
 :root {
-    --recontent-width: calc(80vw); /* Define a reusable width */
+    --recontent-width: calc(80vw);
+    /* Define a reusable width */
 
-    --background-color: #f7f9f9; /* light beige */
+    --background-color: #f7f9f9;
+    /* light beige */
     --card-color: #eaecec;
     --text-color: #2c2c2c;
     --tag-color: #d2d4d4;
@@ -12,6 +13,7 @@
     --tech-stack-color: #ffffff;
     --footer-color: #2c2c2c;
     --expandable-color: #e9e9e9;
+    --divider-color: rgba(0, 0, 0, 0.2);
 
     transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -25,23 +27,30 @@
     --border-color: #d2d4d4;
     --tech-stack-color: #484848;
     --expandable-color: #1e1e1e;
+    --divider-color: rgba(255, 255, 255, 0.2);
 }
-    /* Invert the image in dark mode */
-    .dark-mode #theme-toggle img {
-        filter: invert(1);
-    }
+
+/* Invert the image in dark mode */
+.dark-mode #theme-toggle img {
+    filter: invert(1);
+}
 
 * {
     margin: 0;
     /*padding: 0;
-    box-sizing: border-box;*/ /*Include padding/borders in width*/
+    box-sizing: border-box;*/
+    /*Include padding/borders in width*/
 }
 
-html, body {
-    height: 100%; /* Ensure the body and html take up full height */
-    margin: 0; /* Reset any default margins */
+html,
+body {
+    height: 100%;
+    /* Ensure the body and html take up full height */
+    margin: 0;
+    /* Reset any default margins */
     display: flex;
-    flex-direction: column; /* Align content in a column layout */
+    flex-direction: column;
+    /* Align content in a column layout */
 }
 
 /* Apply variables */
@@ -56,92 +65,116 @@ body {
     font-family: 'Poppins', sans-serif;
     background: url('../assets/images/background-image.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: var(--text-color); /* Neutral dark grey for text */
+    color: var(--text-color);
+    /* Neutral dark grey for text */
     scroll-behavior: smooth;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 main {
-    display: block; /* Default works fine unless other styles interfere */
-    width: 100%; /* Ensure main doesn’t clip child sections */
+    display: block;
+    /* Default works fine unless other styles interfere */
+    width: 100%;
+    /* Ensure main doesnâ€™t clip child sections */
 }
 
 .main-wrapper {
-    flex: 1; /* Fills remaining space in the viewport */
+    flex: 1;
+    /* Fills remaining space in the viewport */
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
+    /* Stack children vertically */
     width: var(--recontent-width);
     margin: 0 auto;
     background-color: var(--background-color);
     padding: 2rem;
-    border-radius: 0 0 12px 12px; /* Bottom-left and bottom-right corners */
+    border-radius: 0 0 12px 12px;
+    /* Bottom-left and bottom-right corners */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box; /* Include padding and border in width calculation */
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
 }
 
 a {
     text-decoration: none;
-    color: #008f68; /* Muted green for links */
+    color: #008f68;
+    /* Muted green for links */
     transition: color 0.3s ease;
 }
 
-    a:hover {
-        color: #00b57f; /* Brighter green on hover */
-    }
+a:hover {
+    color: #00b57f;
+    /* Brighter green on hover */
+}
 
 /* Header */
 header {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
+    /* Stack children vertically */
     justify-content: center;
     align-items: center;
     width: var(--recontent-width);
-    max-width: 100%; /* Prevent overflow */
+    max-width: 100%;
+    /* Prevent overflow */
     max-height: 25vh;
-    margin: 0 auto; /* Centre the header horizontally */
-    padding: 7.5vw 2vw 2vw; /* t - rl - b */
-    background: #2c2c2c; /* Neutral dark grey */
-    color: #f7f9f9; /* Subtle beige for contrast */
+    margin: 0 auto;
+    /* Centre the header horizontally */
+    padding: 7.5vw 2vw 2vw;
+    /* t - rl - b */
+    background: #2c2c2c;
+    /* Neutral dark grey */
+    color: #f7f9f9;
+    /* Subtle beige for contrast */
     box-sizing: border-box;
 }
 
-    header h1 {
-        font-size: 2.5vw; /* Bold and prominent */
-        margin-bottom: 0.5vh;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), /* Outer glow */
-        0 0 5px rgba(0, 0, 0, 0.6); /* Softer inner glow */
-    }
+header h1 {
+    font-size: 2.5vw;
+    /* Bold and prominent */
+    margin-bottom: 0.5vh;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8),
+        /* Outer glow */
+        0 0 5px rgba(0, 0, 0, 0.6);
+    /* Softer inner glow */
+}
 
-    header h2 {
-        font-size: 2.5rem; /* Bold and prominent */
-        margin-top: 2vh !important;
-        margin-bottom: 4px;
-    }
+header h2 {
+    font-size: 2.5rem;
+    /* Bold and prominent */
+    margin-top: 2vh !important;
+    margin-bottom: 4px;
+}
 
-    header h3 {
-        font-size: 2rem; /* Bold and prominent */
-        margin-top: 1rem !important;
-        margin-bottom: 4px;
-    }
+header h3 {
+    font-size: 2rem;
+    /* Bold and prominent */
+    margin-top: 1rem !important;
+    margin-bottom: 4px;
+}
 
-    header p {
-        font-size: 1vw; /* Slightly smaller than the heading */
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-        margin-bottom: 1rem;
-    }
+header p {
+    font-size: 1vw;
+    /* Slightly smaller than the heading */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1rem;
+}
 
 h1 {
-    font-size: 3rem; /* Bold and prominent */
+    font-size: 3rem;
+    /* Bold and prominent */
     margin-bottom: 0.5rem;
 }
 
 h2 {
-    font-size: 2rem; /* Bold and prominent */
+    font-size: 2rem;
+    /* Bold and prominent */
     margin-top: 1.5rem;
 }
 
 h3 {
-    font-size: 1.5rem; /* Bold and prominent */
+    font-size: 1.5rem;
+    /* Bold and prominent */
     margin-top: 4px;
     margin-bottom: 4px;
 }
@@ -150,14 +183,17 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px; /* Fixed height */
+    height: 40px;
+    /* Fixed height */
     width: var(--recontent-width);
     max-width: 100%;
     background: var(--footer-color);
     color: white;
     margin: 8px auto 0;
-    border-radius: 12px 12px 0 0; /* Top-left and top-right corners */
-    padding: 0; /* Ensure no padding issues */
+    border-radius: 12px 12px 0 0;
+    /* Top-left and top-right corners */
+    padding: 0;
+    /* Ensure no padding issues */
 }
 
 /* Section Wrapper */
@@ -173,22 +209,26 @@ button {
     cursor: pointer;
     border: none;
     outline: none;
-    background-color: #00b57f; /* Brighter green for buttons */
+    background-color: #00b57f;
+    /* Brighter green for buttons */
     color: white;
     padding: 0.8rem 1.2rem;
-    border-radius: 2vw; /* Rounded corners */
+    border-radius: 2vw;
+    /* Rounded corners */
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-    button:hover {
-        background-color: #008f68; /* Darker green on hover */
-    }
+button:hover {
+    background-color: #008f68;
+    /* Darker green on hover */
+}
 
-    button:focus {
-        box-shadow: 0 0 6px rgba(0, 191, 127, 0.5); /* Soft green glow */
-    }
+button:focus {
+    box-shadow: 0 0 6px rgba(0, 191, 127, 0.5);
+    /* Soft green glow */
+}
 
 #drag-button {
     position: absolute;
@@ -208,106 +248,136 @@ button {
     margin-bottom: 4vh;
 }
 
-    #drag-button img {
-        width: 1.2vw;
-        height: 1.2vw;
-        user-select: none;
-        pointer-events: none;
-        padding-right: .3vw;
-    }
+#drag-button img {
+    width: 1.2vw;
+    height: 1.2vw;
+    user-select: none;
+    pointer-events: none;
+    padding-right: .3vw;
+}
 
-    #drag-button p {
-        color: black;
-        font-size: 1vw;
-    }
+#drag-button p {
+    color: black;
+    font-size: 1vw;
+}
 
 /* Header Styles */
 header.index-header {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
+    /* Stack children vertically */
     justify-content: center;
     align-items: center;
-    aspect-ratio: 16 / 9; /* Replace with your desired ratio */
-    height: auto; /* Maintain ratio based on the width */
+    aspect-ratio: 16 / 9;
+    /* Replace with your desired ratio */
+    height: auto;
+    /* Maintain ratio based on the width */
     width: var(--recontent-width);
-    max-width: 100%; /* Prevent overflow */
+    max-width: 100%;
+    /* Prevent overflow */
 
-    margin: 0 auto; /* Centre the header horizontally */
+    margin: 0 auto;
+    /* Centre the header horizontally */
     padding: 13vh 2vw 2vw;
-    color: #f7f9f9; /* Subtle beige for contrast */
+    color: #f7f9f9;
+    /* Subtle beige for contrast */
     box-sizing: border-box;
     /* Animation */
-    background-size: cover; /* Maintain a good visual fill */
-    background-repeat: no-repeat; /* Prevent tiling of smaller images */
-    background-position: center; /* Centre the image for alignment */
+    background-size: cover;
+    /* Maintain a good visual fill */
+    background-repeat: no-repeat;
+    /* Prevent tiling of smaller images */
+    background-position: center;
+    /* Centre the image for alignment */
     animation: fadeBackground 25s infinite;
     /* Positioning for overlay */
     position: relative;
-    z-index: 1; /* Ensure content stays above the overlay */
+    z-index: 1;
+    /* Ensure content stays above the overlay */
 }
 
-    header.index-header::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Transparent black overlay */
-        z-index: -1; /* Ensure the overlay stays behind the text */
-        pointer-events: none; /* Allow interaction with header content */
-    }
+header.index-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Transparent black overlay */
+    z-index: -1;
+    /* Ensure the overlay stays behind the text */
+    pointer-events: none;
+    /* Allow interaction with header content */
+}
 
 /* Keyframes for background fading */
 @keyframes fadeBackground {
-        0%, 14.1571% {
+
+    0%,
+    14.1571% {
         background-image: url('../assets/images/phobophobia/banner.jpg');
     }
 
-    14.1571%, 28.3143% {
+    14.1571%,
+    28.3143% {
         background-image: url('../assets/images/revenge-of-the-renter/banner.jpg');
     }
 
-    28.3143%, 42.4714% {
+    28.3143%,
+    42.4714% {
         background-image: url('../assets/images/mechmates/banner.jpg');
     }
 
-    42.4714%, 56.6286% {
+    42.4714%,
+    56.6286% {
         background-image: url('../assets/images/the-news/banner.jpg');
     }
 
-    56.6286%, 70.7857% {
+    56.6286%,
+    70.7857% {
         background-image: url('../assets/images/noorderpoort/banner.jpg');
     }
 
-    70.7857%, 84.9429% {
+    70.7857%,
+    84.9429% {
         background-image: url('../assets/images/project-parasite/banner.jpg');
     }
 
-    84.9429%, 99.1% {
+    84.9429%,
+    99.1% {
         background-image: url('../assets/images/disobey-me/banner2.jpg');
     }
 
-    99.1%, 100% {
+    99.1%,
+    100% {
         background-image: url('../assets/images/phobophobia/banner.jpg');
     }
 }
 
 .index-about-image-wrapper {
-    width: 14rem; /* Set the width of the wrapper */
-    height: 14rem; /* Set the height of the wrapper to be square */
-    overflow: hidden; /* Hide the overflow to create the circular effect */
-    border-radius: 50%; /* Make the wrapper circular */
-    display: flex; /* Ensure the image is centered inside */
+    width: 14rem;
+    /* Set the width of the wrapper */
+    height: 14rem;
+    /* Set the height of the wrapper to be square */
+    overflow: hidden;
+    /* Hide the overflow to create the circular effect */
+    border-radius: 50%;
+    /* Make the wrapper circular */
+    display: flex;
+    /* Ensure the image is centered inside */
     justify-content: center;
     align-items: center;
     margin-top: 1.5rem;
 }
 
 .index-about-image {
-    max-width: 30rem; /* Maintain the 2:1 aspect ratio */
-    height: 30rem; /* Maintain 2:1 aspect ratio */
-    object-fit: cover; /* Ensure the image fills the circle while maintaining its aspect ratio */
+    max-width: 30rem;
+    /* Maintain the 2:1 aspect ratio */
+    height: 30rem;
+    /* Maintain 2:1 aspect ratio */
+    object-fit: cover;
+    /* Ensure the image fills the circle while maintaining its aspect ratio */
     object-position: center top;
     object-position: center 20%;
     margin-top: 2.5rem;
@@ -316,50 +386,62 @@ header.index-header {
 /* MOBILE SCREENS */
 @media screen and (max-width: 768px) {
     :root {
-        --recontent-width: 95%; /* Make content take up more space on smaller screens */
+        --recontent-width: 95%;
+        /* Make content take up more space on smaller screens */
     }
 
     .main-wrapper {
-        padding: 1rem; /* Reduce padding for better fit */
-        border-radius: 0; /* Remove rounded corners if needed */
-        box-shadow: none; /* Simplify for mobile */
+        padding: 1rem;
+        /* Reduce padding for better fit */
+        border-radius: 0;
+        /* Remove rounded corners if needed */
+        box-shadow: none;
+        /* Simplify for mobile */
     }
 
     header {
-        padding: 5vw 2vw 2vw; /* Adjust padding */
+        padding: 5vw 2vw 2vw;
+        /* Adjust padding */
     }
 
-        header h1 {
-            font-size: 8vw; /* Scale font size based on screen width */
-        }
+    header h1 {
+        font-size: 8vw;
+        /* Scale font size based on screen width */
+    }
 
-        header h2 {
-            font-size: 1.8rem;
-        }
+    header h2 {
+        font-size: 1.8rem;
+    }
 
-        header h3 {
-            font-size: 1.5rem;
-        }
+    header h3 {
+        font-size: 1.5rem;
+    }
 
     header p {
-        font-size: 3vw; /* Slightly smaller than the heading */
+        font-size: 3vw;
+        /* Slightly smaller than the heading */
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
         margin-bottom: 1rem;
     }
 
     footer {
-        width: 100%; /* Make footer span full width */
-        border-radius: 0; /* Remove rounded corners */
+        width: 100%;
+        /* Make footer span full width */
+        border-radius: 0;
+        /* Remove rounded corners */
     }
 
     .index-about-image-wrapper {
-        width: 10rem; /* Set the width of the wrapper */
-        height: 10rem; /* Set the height of the wrapper to be square */
+        width: 10rem;
+        /* Set the width of the wrapper */
+        height: 10rem;
+        /* Set the height of the wrapper to be square */
         margin-top: 0;
     }
 
     .index-about-image {
-        height: 30rem; /* Reduce size */
+        height: 30rem;
+        /* Reduce size */
     }
 
     button {
@@ -400,20 +482,25 @@ header.index-header {
         left: 0;
         width: 100%;
         height: 100%;
-        pointer-events: none;*/ /* Prevents the overlay from affecting interactions */
-/*transition: background-color 1s ease;*/ /* Smooth transition for tint effect */
+        pointer-events: none;*/
+/* Prevents the overlay from affecting interactions */
+/*transition: background-color 1s ease;*/
+/* Smooth transition for tint effect */
 /*}
 
 .morning-dusk::after {
-    background-color: rgba(255, 165, 0, 0.3);*/ /* Soft orange tint */
+    background-color: rgba(255, 165, 0, 0.3);*/
+/* Soft orange tint */
 /*}
 
 .daytime::after {
-    background-color: transparent;*/ /* No tint */
+    background-color: transparent;*/
+/* No tint */
 /*}
 
 .nighttime::after {
-    background-color: rgba(0, 0, 139, 0.4);*/ /* Dark blue tint */
+    background-color: rgba(0, 0, 139, 0.4);*/
+/* Dark blue tint */
 /*}*/
 
 /*.icon-container {
@@ -423,14 +510,16 @@ header.index-header {
 }
 
     .icon-container img {
-        width: 50px;*/ /* Adjust size as needed */
-        /*height: 50px;
+        width: 50px;*/
+/* Adjust size as needed */
+/*height: 50px;
     }
 
 .tooltip {
     position: absolute;
-    bottom: 110%;*/ /* Position above the image */
-    /*left: 50%;
+    bottom: 110%;*/
+/* Position above the image */
+/*left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
@@ -447,3 +536,46 @@ header.index-header {
     opacity: 1;
     visibility: visible;
 }*/
+/* Distinctions Section */
+.distinctions-container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.distinction-divider {
+    height: 1px;
+    width: 100%;
+    margin: 1rem 0;
+    /* Radial gradient for fading ends. */
+    background: radial-gradient(circle, var(--text-color) 0%, transparent 100%);
+    opacity: 0.2;
+}
+
+.distinctions-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align left to match text */
+    gap: 1rem 2rem;
+    padding: 0;
+}
+
+.distinction-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.distinction-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    flex-shrink: 0;
+    background-color: #ffc107;
+    -webkit-mask: url('../assets/images/icons/trophy.svg') no-repeat center / contain;
+    mask: url('../assets/images/icons/trophy.svg') no-repeat center / contain;
+}
