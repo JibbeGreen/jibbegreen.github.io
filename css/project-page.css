@@ -405,6 +405,8 @@
     max-width: 100%;
     justify-content: center;
     gap: 1.25vh;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
     .social-buttons a {
