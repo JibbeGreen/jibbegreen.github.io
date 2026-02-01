@@ -5,7 +5,8 @@ import { renderProjects } from "/js/scripts/projects-renderer.js";
 const snippets = {
     nav: { placeholder: "nav-placeholder", file: "nav.html" },
     foot: { placeholder: "footer-placeholder", file: "footer.html" },
-    tech: { placeholder: "technical-experience", file: "technical-experience.html" }
+    tech: { placeholder: "technical-experience", file: "technical-experience.html" },
+    distinctions: { placeholder: "distinctions-placeholder", file: "distinctions.html" }
     //  ↑ create this tiny HTML fragment once and keep it beside nav/footer
 };
 
@@ -30,6 +31,7 @@ if (location.protocol === "file:") {
 
         // tech experience (only if that id exists on this page)
         inject(snippets.tech);
+        inject(snippets.distinctions);
 
         // render the project cards
         renderProjects();
