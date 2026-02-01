@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,7 @@
     <link rel="stylesheet" href="css/project-page.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/csharp.min.js"></script>
     <script>hljs.highlightAll();</script>
@@ -22,6 +22,7 @@
     <script src="/js/scripts/expandable-section.js" defer></script>
     <script src="/js/scripts/mode-toggle.js" defer></script>
 </head>
+
 <body>
 
     <div id="nav-placeholder"></div>
@@ -50,45 +51,46 @@
         <main>
             <aside class="project-sidebar">
                 <dl class="project-details">
-                    <dt>PROJECT STATUS:</dt>
+                    <dt><img src="assets/images/icons/status.svg" alt="" class="detail-icon">STATUS:</dt>
                     <dd>COMPLETED</dd>
-                    <dt>PROJECT TYPE:</dt>
+                    <dt><img src="assets/images/icons/type.svg" alt="" class="detail-icon">TYPE:</dt>
                     <dd>UNIVERSITY</dd>
-                    <dt>PROJECT DURATION:</dt>
+                    <dt><img src="assets/images/icons/duration.svg" alt="" class="detail-icon">DURATION:</dt>
                     <dd>9 SEPTEMBER 2024 - 15 NOVEMBER 2024</dd>
-                    <dt>SOFTWARE USED:</dt>
+                    <dt><img src="assets/images/icons/tool.png" alt="" class="detail-icon">SOFTWARE USED:</dt>
                     <dd>UNITY</dd>
-                    <dt>LANGUAGES USED:</dt>
+                    <dt><img src="assets/images/icons/languages.svg" alt="" class="detail-icon">LANGUAGES USED:</dt>
                     <dd>C#</dd>
-                    <dt>PRIMARY ROLE(S):</dt>
+                    <dt><img src="assets/images/icons/role.svg" alt="" class="detail-icon">PRIMARY ROLE(S):</dt>
                     <dd>PROGRAMMER</dd>
-                    <dt>TEAM SIZE:</dt>
+                    <dt><img src="assets/images/icons/team.png" alt="" class="detail-icon">TEAM SIZE:</dt>
                     <dd>1</dd>
                 </dl>
             </aside>
 
             <div class="content-wrapper">
-                <iframe width="560"
-                        height="315"
-                        src="https://www.youtube-nocookie.com/embed/BLFn0_QCXWY?si=-gY5nn7Ste0ecsWJ"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen>
+                <iframe width="560" height="315"
+                    src="https://www.youtube-nocookie.com/embed/BLFn0_QCXWY?si=-gY5nn7Ste0ecsWJ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
 
                 <br />
 
                 <div class="text-wrapper">
-                    <p>For my university's programming track I focused on programming a levelling system and skill tree, and incorporate that into the existing data base of the Unity Learn FPS game.</p>
-                    <p>During this project I learned about software and game design patterns (e.g. Observer, Command), and incorporated some into the system. Besides this I also made a UML Chart for the two systems:</p>
+                    <p>For my university's programming track I focused on programming a levelling system and skill tree,
+                        and incorporate that into the existing data base of the Unity Learn FPS game.</p>
+                    <p>During this project I learned about software and game design patterns (e.g. Observer, Command),
+                        and incorporated some into the system. Besides this I also made a UML Chart for the two systems:
+                    </p>
                 </div>
 
                 <br />
 
                 <div class="social-buttons">
-                    <a href="https://github.com/JibbeGreen/LevellingSkillTree" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <a href="https://github.com/JibbeGreen/LevellingSkillTree" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
                         <img src="assets/images/icons/github.png" alt="GitHub Icon" title="GitHub">
                     </a>
                 </div>
@@ -103,9 +105,12 @@
                             <img class="expand-icon" src="assets/images/icons/arrow-down.png" alt="Expand">
                         </button>
                         <div class="expandable-content">
-                            <img src="assets/images/skill-tree/uml-legend.png" onclick="openOverlay(this)" alt="UML Legend">
-                            <img src="assets/images/skill-tree/uml-leveling.png" onclick="openOverlay(this)" alt="UML Legend">
-                            <img src="assets/images/skill-tree/uml-skill-tree.jpg" onclick="openOverlay(this)" alt="UML Legend">
+                            <img src="assets/images/skill-tree/uml-legend.png" onclick="openOverlay(this)"
+                                alt="UML Legend">
+                            <img src="assets/images/skill-tree/uml-leveling.png" onclick="openOverlay(this)"
+                                alt="UML Legend">
+                            <img src="assets/images/skill-tree/uml-skill-tree.jpg" onclick="openOverlay(this)"
+                                alt="UML Legend">
                         </div> <!-- expandable-content -->
                     </div> <!-- expandable-container -->
 
@@ -115,11 +120,13 @@
                             <img class="expand-icon" src="assets/images/icons/arrow-down.png" alt="Expand">
                         </button>
                         <div class="expandable-content">
-                            <p>In the following scripts I used the Observer from the project to prevent requiring Update methods, and streamlining other methods preventing the need of direct associations.</p>
-                            <p>As for certain variables types I chose to keep them public, to stay consistent with the rest of the FPS Micro game scripts, which for some reason chose to keep almost all their variables public.</p>
+                            <p>In the following scripts I used the Observer from the project to prevent requiring Update
+                                methods, and streamlining other methods preventing the need of direct associations.</p>
+                            <p>As for certain variables types I chose to keep them public, to stay consistent with the
+                                rest of the FPS Micro game scripts, which for some reason chose to keep almost all their
+                                variables public.</p>
                             <!-- XP‑Manager snippet -->
-                            <button class="expandable-button"
-                                    onclick="toggleContent(this,'skill-tree/xp-manager.cs')">
+                            <button class="expandable-button" onclick="toggleContent(this,'skill-tree/xp-manager.cs')">
                                 <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                 CODE SNIPPET – XP Manager
                                 <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -127,16 +134,14 @@
                             <div class="expandable-content"></div>
 
                             <!-- PlayerXpBar snippet -->
-                            <button class="expandable-button"
-                                    onclick="toggleContent(this,'skill-tree/playerxpbar.cs')">
+                            <button class="expandable-button" onclick="toggleContent(this,'skill-tree/playerxpbar.cs')">
                                 <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                 CODE SNIPPET – PlayerXpBar
                                 <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
                             </button>
                             <div class="expandable-content"></div>
 
-                            <button class="expandable-button"
-                                    onclick="toggleContent(this,'skill-tree/events.cs')">
+                            <button class="expandable-button" onclick="toggleContent(this,'skill-tree/events.cs')">
                                 <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                 CODE SNIPPET – Observer
                                 <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -150,10 +155,11 @@
                                 <img class="expand-icon" src="assets/images/icons/arrow-down.png" alt="Expand">
                             </button>
                             <div class="expandable-content">
-                                <p>Skill tree system using a command pattern, with minimized associations using the observer pattern.</p>
+                                <p>Skill tree system using a command pattern, with minimized associations using the
+                                    observer pattern.</p>
                                 <!-- Graph Manager snippet -->
                                 <button class="expandable-button"
-                                        onclick="toggleContent(this,'skill-tree/graph-manager.cs')">
+                                    onclick="toggleContent(this,'skill-tree/graph-manager.cs')">
                                     <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                     CODE SNIPPET - Graph Manager
                                     <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -161,8 +167,7 @@
                                 <div class="expandable-content"></div>
 
                                 <!-- Node snippet -->
-                                <button class="expandable-button"
-                                        onclick="toggleContent(this,'skill-tree/node.cs')">
+                                <button class="expandable-button" onclick="toggleContent(this,'skill-tree/node.cs')">
                                     <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                     CODE SNIPPET - Node
                                     <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -170,8 +175,7 @@
                                 <div class="expandable-content"></div>
 
                                 <!-- Command snippet -->
-                                <button class="expandable-button"
-                                        onclick="toggleContent(this,'skill-tree/command.cs')">
+                                <button class="expandable-button" onclick="toggleContent(this,'skill-tree/command.cs')">
                                     <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                     CODE SNIPPET - Command
                                     <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -179,8 +183,7 @@
                                 <div class="expandable-content"></div>
 
                                 <!-- Edge snippet -->
-                                <button class="expandable-button"
-                                        onclick="toggleContent(this,'skill-tree/edge.cs')">
+                                <button class="expandable-button" onclick="toggleContent(this,'skill-tree/edge.cs')">
                                     <img class="snippet-icon" src="assets/images/icons/code.png" alt="Code Snippet">
                                     CODE SNIPPET - Edge
                                     <img src="assets/images/icons/arrow-down.png" class="expand-icon" alt="">
@@ -198,4 +201,5 @@
     <div id="footer-placeholder"></div>
 
 </body>
+
 </html>
