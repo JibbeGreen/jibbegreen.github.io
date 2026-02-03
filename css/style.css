@@ -540,7 +540,7 @@ header.index-header::before {
 .distinctions-container {
     width: 100%;
     margin: 0 auto;
-    padding-top: 1rem;
+    padding-top: .5rem;
     display: flex;
     flex-direction: column;
 }
