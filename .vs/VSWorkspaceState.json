@@ -3,7 +3,6 @@
     "",
     "\\assets",
     "\\assets\\images",
-    "\\assets\\images\\icons",
     "\\assets\\snippets",
     "\\assets\\snippets\\disobey-me",
     "\\assets\\snippets\\skill-tree",
@@ -11,6 +10,6 @@
     "\\js",
     "\\js\\scripts"
   ],
-  "SelectedNode": "\\assets\\images\\icons\\personal-icon-dark.png",
+  "SelectedNode": "\\nav.html",
   "PreviewInSolutionExplorer": false
 }
