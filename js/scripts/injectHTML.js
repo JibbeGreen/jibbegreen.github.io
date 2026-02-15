@@ -1,6 +1,7 @@
 ﻿/* insertHTML.js — inject nav, footer, projects and tech‑stack section */
 
 import { renderProjects } from "/js/scripts/projects-renderer.js";
+import { initNav } from "/js/scripts/nav.js";
 
 const snippets = {
     nav: { placeholder: "nav-placeholder", file: "nav.html" },
@@ -18,15 +19,23 @@ if (location.protocol === "file:") {
         /* helper that fetches a fragment and drops it into its slot */
         const inject = ({ placeholder, file }) => {
             const slot = document.getElementById(placeholder);
-            if (!slot) return;                            // page doesn’t need it
-            fetch(file, { cache: "no-cache" })
+            if (!slot) return Promise.resolve(); // page doesn’t need it
+            return fetch(file, { cache: "no-cache" })
                 .then(r => r.text())
-                .then(html => (slot.innerHTML = html))
-                .catch(err => console.error(`${file} →`, err));
+                .then(html => {
+                    slot.innerHTML = html;
+                    return true;
+                })
+                .catch(err => {
+                    console.error(`${file} →`, err);
+                    return false;
+                });
         };
 
         // nav + footer (always present)
-        inject(snippets.nav);
+        inject(snippets.nav).then(() => {
+            initNav();
+        });
         inject(snippets.foot);
 
         // tech experience (only if that id exists on this page)
