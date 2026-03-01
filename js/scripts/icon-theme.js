@@ -4,7 +4,7 @@ function updateFavicon() {
 
     favicon.href = darkMode 
         ? "assets/images/icons/personal-icon-dark.png" 
-        : "assets/images/icons/personal-icon-light.svg";
+        : "assets/images/icons/JBW_logo.svg";
 }
 
 // Run on page load
