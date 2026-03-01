@@ -85,7 +85,7 @@
 
         .contact-strip h1 {
             font-size: 48px;
-            font-weight: 600;
+            font-weight: var(--header-font-weight);
             text-transform: uppercase;
             margin-bottom: 20px;
             margin-top: 0;
