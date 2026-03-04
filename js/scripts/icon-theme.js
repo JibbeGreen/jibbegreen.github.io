@@ -3,8 +3,8 @@ function updateFavicon() {
     const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
     favicon.href = darkMode 
-        ? "assets/images/icons/personal-icon-dark.png" 
-        : "assets/images/icons/JBW_logo.svg";
+        ? "assets/images/icons/JBW.svg" 
+        : "assets/images/icons/JBW.svg";
 }
 
 // Run on page load
