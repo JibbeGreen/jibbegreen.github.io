@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\assets\\images",
+    "\\assets\\images\\icons"
   ],
-  "SelectedNode": "\\technical-experience.html",
+  "SelectedNode": "\\assets\\images\\icons\\JBW.svg",
   "PreviewInSolutionExplorer": false
 }
