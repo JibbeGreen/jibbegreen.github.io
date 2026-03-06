@@ -31,9 +31,16 @@
     --divider-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Invert the image in dark mode */
-.dark-mode #theme-toggle img {
-    filter: invert(1);
+/* Handle the theme toggle icons (they are white in source) */
+#theme-toggle img {
+    filter: invert(1) !important;
+    /* Make white icons black in light mode */
+    transition: filter 0.2s ease;
+}
+
+body.dark-mode #theme-toggle img {
+    filter: invert(0) !important;
+    /* Keep white icons white in dark mode */
 }
 
 * {
