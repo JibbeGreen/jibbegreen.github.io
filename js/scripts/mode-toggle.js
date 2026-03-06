@@ -16,9 +16,9 @@
             const updateIcon = (isDark) => {
                 const img = toggleButton.querySelector("img");
                 if (img) {
-                    // If Dark Mode (isDark is true) -> Show Sun (to switch to Light)
-                    // If Light Mode (isDark is false) -> Show Moon (to switch to Dark)
-                    img.src = isDark ? "assets/images/icons/moon.png" : "assets/images/icons/sun.svg";
+                    // If Dark Mode (isDark is true) -> Show Moon (to switch to Light)
+                    // If Light Mode (isDark is false) -> Show Sun (to switch to Dark)
+                    img.src = isDark ? "assets/images/icons/moon-stars.svg" : "assets/images/icons/sun.svg";
                     img.alt = isDark ? "Light Mode" : "Dark Mode";
                     img.title = isDark ? "Switch to Light Mode" : "Switch to Dark Mode";
                 }

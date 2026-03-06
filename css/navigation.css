@@ -96,8 +96,8 @@ nav ul li a:hover {
 }
 
 #theme-toggle img {
-    width: 1.5vw;
-    height: auto;
+    width: auto;
+    height: 1.5vw;
     transition: filter 0.3s ease;
 }
 
@@ -110,10 +110,7 @@ nav ul li a:hover {
     /* Soft green glow */
 }
 
-/* Prevent global dark-mode inversion from making the icons black */
-body.dark-mode #theme-toggle img {
-    filter: none !important;
-}
+/* CSS filters are now handled in style.css */
 
 .active {
     color: #00b57f;
