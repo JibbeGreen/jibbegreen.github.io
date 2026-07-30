@@ -85,9 +85,9 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5vw;
+    width: 1.5vw;
     /* Adjust size relative to viewport */
-    height: 2.5vw;
+    height: 1.5vw;
     /* Must match width to be circular */
     min-width: 20px;
     /* Prevents it from being too small */
@@ -112,11 +112,15 @@ nav ul li a:hover {
 
 /* CSS filters are now handled in style.css */
 
-.active {
+nav ul li a.active,
+.overlay ul li a.active {
     color: #00b57f;
     /* Bright green */
     text-decoration: underline;
-    /* Underline the link */
+    text-decoration-color: #00b57f;
+    text-decoration-thickness: .1vw;
+    text-underline-offset: .3vw;
+    font-weight: bold;
 }
 
 /* Portfolio Button */
