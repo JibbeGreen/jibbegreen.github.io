@@ -1,7 +1,6 @@
-import { injectHTML } from './injectHTML.js';
+import { inject } from './injectHTML.js';
 import { initNav } from './nav.js';
 import { initThemeToggle } from './mode-toggle.js';
-import { initHeaderAnim } from './header-animation.js';
 import { initProjectCards } from './project-card-anim.js';
 import { initExpandables } from './expandable-section.js';
 import { initLoadingManager } from './loading-manager.js';
@@ -48,16 +47,28 @@ export function initTagFiltering() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-    // 1. Inject common HTML snippets (nav, footer, etc.) and render projects
-    await injectHTML();
+import { renderProjects } from './projects-renderer.js';
 
-    // 2. Initialize all modules
-    if (typeof initNav === 'function') initNav();
-    if (typeof initThemeToggle === 'function') initThemeToggle();
-    if (typeof initHeaderAnim === 'function') initHeaderAnim();
-    if (typeof initProjectCards === 'function') initProjectCards();
-    if (typeof initExpandables === 'function') initExpandables();
-    if (typeof initTagFiltering === 'function') initTagFiltering();
+document.addEventListener('DOMContentLoaded', async () => {
+    // 1. Run independent scripts immediately to prevent jitter
     if (typeof initLoadingManager === 'function') initLoadingManager();
+    if (typeof initExpandables === 'function') initExpandables();
+
+    // 2. Fetch and inject HTML concurrently
+    const navPromise = inject("nav-placeholder", "nav.html").then(() => {
+        if (typeof initNav === 'function') initNav();
+        if (typeof initThemeToggle === 'function') initThemeToggle();
+    });
+    
+    const footPromise = inject("footer-placeholder", "footer.html");
+    const techPromise = inject("technical-experience", "technical-experience.html");
+    const distPromise = inject("distinctions-placeholder", "distinctions.html");
+
+    // Wait for all fragments to be injected
+    await Promise.all([navPromise, footPromise, techPromise, distPromise]);
+
+    // 3. Render projects and run dependent scripts
+    renderProjects();
+    if (typeof initProjectCards === 'function') initProjectCards();
+    if (typeof initTagFiltering === 'function') initTagFiltering();
 });
