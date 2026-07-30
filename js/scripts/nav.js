@@ -26,4 +26,18 @@ export function initNav() {
     } else {
         console.warn('Navigation elements not found!');
     }
+
+    // Set active class on the current page link
+    const currentPath = window.location.pathname.replace(/\/$/, "");
+    const currentPathEnd = currentPath.split('/').pop() || 'index.html';
+
+    const allNavLinks = document.querySelectorAll('.desktop-nav a, .overlay a');
+    allNavLinks.forEach(link => {
+        const linkPath = new URL(link.href, window.location.origin).pathname;
+        const linkPathEnd = linkPath.split('/').pop() || 'index.html';
+        
+        if (currentPathEnd === linkPathEnd) {
+            link.classList.add('active');
+        }
+    });
 }
