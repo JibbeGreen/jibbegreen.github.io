@@ -3,32 +3,31 @@
     --recontent-width: calc(80vw);
     /* Define a reusable width */
 
-    --background-color: #f7f9f9;
-    /* light beige */
-    --card-color: #eaecec;
-    --text-color: #2c2c2c;
-    --tag-color: #d2d4d4;
-    --tag2-color: #eaecec;
-    --border-color: #eaecec;
+    --background-color: #f0f7f4; /* light minty green */
+    --card-color: #e3eee9;
+    --text-color: #1a241f; /* dark green-tinted text */
+    --tag-color: #cbe0d7;
+    --tag2-color: #d6e9df;
+    --border-color: #cbe0d7;
     --tech-stack-color: #ffffff;
-    --footer-color: #2c2c2c;
-    --expandable-color: #e9e9e9;
-    --divider-color: rgba(0, 0, 0, 0.2);
+    --footer-color: #08110c; /* very dark green */
+    --expandable-color: #dbe8e1;
+    --divider-color: rgba(0, 181, 127, 0.2);
     --header-font-weight: 800;
 
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .dark-mode {
-    --background-color: #252525;
-    --card-color: #484848;
+    --background-color: #08110c; /* very dark green-black */
+    --card-color: #111d18; /* slightly lighter dark green */
     --text-color: #ffffff;
-    --tag-color: #2c2c2c;
-    --tag2-color: #1e1e1e;
-    --border-color: #d2d4d4;
-    --tech-stack-color: #484848;
-    --expandable-color: #1e1e1e;
-    --divider-color: rgba(255, 255, 255, 0.2);
+    --tag-color: #1b2e25;
+    --tag2-color: #13221b;
+    --border-color: #1b2e25;
+    --tech-stack-color: #111d18;
+    --expandable-color: #0d1713;
+    --divider-color: rgba(0, 181, 127, 0.2);
 }
 
 /* Handle the theme toggle icons (they are white in source) */
