@@ -248,6 +248,74 @@ button:focus {
     /* Soft green glow */
 }
 
+.button-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Portfolio Button Styles (Moved from navigation.css) */
+.portfolio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Red fill-in animation */
+.portfolio-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: red;
+    z-index: 1; /* Behind text */
+    transition: width 0.4s ease;
+}
+
+.portfolio-button:hover::before {
+    width: 100%;
+}
+
+.portfolio-button .portfolio-text {
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-button .portfolio-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    padding-right: 0.4rem;
+    filter: brightness(0) invert(1);
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-button:hover .portfolio-text,
+.portfolio-button:hover .portfolio-icon {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.portfolio-button .open-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 3; /* Topmost */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-button:hover .open-text {
+    opacity: 1;
+}
+
 #drag-button {
     position: absolute;
     bottom: 1vw;
