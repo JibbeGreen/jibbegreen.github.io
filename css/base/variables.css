@@ -33,18 +33,30 @@
 }
 
 /* Handle the theme toggle icons (they are white in source) */
+#theme-toggle .theme-icon-dark {
+    display: none;
+}
+
+.dark-mode #theme-toggle .theme-icon-light {
+    display: none;
+}
+
+.dark-mode #theme-toggle .theme-icon-dark {
+    display: inline-block;
+}
+
 #theme-toggle img {
     filter: invert(1) !important;
     /* Make white icons black in light mode */
     transition: filter 0.2s ease;
 }
 
-body.dark-mode #theme-toggle img {
+.dark-mode #theme-toggle img {
     filter: invert(0) !important;
     /* Keep white icons white in dark mode */
 }
 
 /* Invert black unity logo in dark mode */
-body.dark-mode img[src*="unity.svg"] {
+.dark-mode img[src*="unity.svg"] {
     filter: invert(1);
 }

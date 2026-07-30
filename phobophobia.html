@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark-mode");
+        }
+        let animStart = sessionStorage.getItem("animationStartTime");
+        if (!animStart) {
+            animStart = Date.now();
+            sessionStorage.setItem("animationStartTime", animStart);
+        }
+        const elapsed = (Date.now() - animStart) / 1000;
+        const offset = elapsed % 20;
+        document.write(`<style>header.index-header { animation-delay: -${offset}s !important; }</style>`);
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio website of Jibbe Wieman">
