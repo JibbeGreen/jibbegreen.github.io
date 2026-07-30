@@ -14,6 +14,7 @@
     --expandable-color: #dbe8e1;
     --divider-color: rgba(0, 181, 127, 0.2);
     --header-font-weight: 800;
+    --featured-projects-color: rgba(255, 255, 255, 0.6);
 
     transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -28,6 +29,7 @@
     --tech-stack-color: #111d18;
     --expandable-color: #0d1713;
     --divider-color: rgba(0, 181, 127, 0.2);
+    --featured-projects-color: rgba(20, 20, 20, 0.6);
 }
 
 /* Handle the theme toggle icons (they are white in source) */
