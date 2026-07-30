@@ -166,6 +166,102 @@
     .see-all-link {
         font-size: 3vw;
     }
+
+    .statistics-wrapper {
+        flex-direction: column !important;
+        gap: 3vw !important;
+        border-radius: 3vw !important;
+        padding: 4vw !important;
+        margin-bottom: 4vw !important;
+    }
+    .stat-item {
+        justify-content: flex-start !important;
+        width: 100% !important;
+        gap: 4vw !important;
+        padding: 0 !important;
+    }
+    .stat-item:not(:last-child) {
+        border-right: none !important;
+        border-bottom: 1px solid var(--divider-color);
+        padding-bottom: 3vw !important;
+    }
+    .stat-icon-container {
+        width: 12vw !important;
+        height: 12vw !important;
+    }
+    .stat-icon {
+        width: 6vw !important;
+        height: 6vw !important;
+    }
+    .stat-text h3 {
+        font-size: 5vw !important;
+    }
+    .stat-text p {
+        font-size: 3.5vw !important;
+    }
+}
+
+/* Statistics Bar */
+.statistics-wrapper {
+    background: var(--featured-projects-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1vw;
+    padding: 1.5vw;
+    margin-bottom: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    flex: 1;
+    justify-content: center;
+    padding: 0 1vw;
+}
+
+.stat-item:not(:last-child) {
+    border-right: 1px solid var(--divider-color);
+}
+
+.stat-icon-container {
+    background-color: rgba(0, 181, 127, 0.1);
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.stat-icon {
+    width: 1.8vw;
+    height: 1.8vw;
+    color: #00b57f;
+}
+
+.stat-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-text h3 {
+    margin: 0;
+    font-size: 1.6vw;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.stat-text p {
+    margin: 0;
+    margin-top: 0.2vw;
+    font-size: 0.9vw;
+    color: var(--text-color);
+    opacity: 0.8;
 }
 
 @media screen and (min-width: 769px) {
