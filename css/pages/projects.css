@@ -328,8 +328,6 @@
 /* Tags */
 .tags-container {
     text-align: center;
-    margin-bottom: 1vh;
-    margin-top: auto; /* Pushes tags to the bottom */
     justify-content: flex-start; /* Align tags to the left */
 }
 
