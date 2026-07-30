@@ -1,0 +1,89 @@
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #00b57f;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 2vw;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    background-color: #008f68;
+}
+
+button:focus {
+    box-shadow: 0 0 6px rgba(0, 191, 127, 0.5);
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Portfolio Button Styles */
+.portfolio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Red fill-in animation */
+.portfolio-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: red;
+    z-index: 1;
+    transition: width 0.4s ease;
+}
+
+.portfolio-button:hover::before {
+    width: 100%;
+}
+
+.portfolio-button .portfolio-text {
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-button .portfolio-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    padding-right: 0.4rem;
+    filter: brightness(0) invert(1);
+    z-index: 2;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-button:hover .portfolio-text,
+.portfolio-button:hover .portfolio-icon {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.portfolio-button .open-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 3;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-button:hover .open-text {
+    opacity: 1;
+}

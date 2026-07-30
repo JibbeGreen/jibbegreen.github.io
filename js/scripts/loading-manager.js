@@ -1,5 +1,10 @@
 //Immediately call function on page load
-addLoadingScreen();
+export function initLoadingManager() {
+    const isIndex = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    if (isIndex) {
+        addLoadingScreen();
+    }
+}
 function addLoadingScreen() {
     // Check if the loading screen has already been shown (using sessionStorage to persist across reloads)
     if (sessionStorage.getItem("loadingScreenShown") === "true") {

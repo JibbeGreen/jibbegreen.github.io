@@ -183,20 +183,19 @@ class PanelScroll {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+export function initProjectCards() {
+    const dragButton = document.getElementById("drag-button");
+    const projectsContainer = document.querySelector(".projects-container");
+    if (!dragButton || !projectsContainer) return;
+    
     if (window.matchMedia("(min-width: 769px)").matches) {
         new PanelScroll(".projects-container", 0.35);
     }
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-    const projectsContainer = document.querySelector(".projects-container");
-    if (projectsContainer) {
-        projectsContainer.addEventListener("dragstart", (event) => {
-            event.preventDefault();
-        });
-    }
-});
+    projectsContainer.addEventListener("dragstart", (event) => {
+        event.preventDefault();
+    });
+}
 
 //snapToNearestCard() {
 //    let firstCard = this.cards[0];
