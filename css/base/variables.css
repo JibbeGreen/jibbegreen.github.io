@@ -43,3 +43,8 @@ body.dark-mode #theme-toggle img {
     filter: invert(0) !important;
     /* Keep white icons white in dark mode */
 }
+
+/* Invert black unity logo in dark mode */
+body.dark-mode img[src*="unity.svg"] {
+    filter: invert(1);
+}
