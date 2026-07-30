@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function initHeaderAnim() {
     const header = document.querySelector("header.index-header");
+    if (!header) return;
 
     // Get the start time or set it for the first time
     let animationStartTime = sessionStorage.getItem("animationStartTime");
@@ -20,4 +21,4 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("beforeunload", () => {
         sessionStorage.setItem("animationStartTime", animationStartTime);
     });
-});
+}

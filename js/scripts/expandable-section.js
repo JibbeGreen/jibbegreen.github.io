@@ -1,4 +1,4 @@
-﻿console.log("Expandable script loaded!");
+console.log("Expandable script loaded!");
 
 /* -------------------------------------------------------------
    expandable-sections + lazy code‑snippet loader + line nums
@@ -96,10 +96,10 @@ function toggleContent(button, filename = null, event = null) {
 
     if (show && filename) loadSnippet(content, filename);
 }
-//window.toggleContent = toggleContent;
+window.toggleContent = toggleContent;
 
 /* ---------- initial setup -------------------------------------- */
-document.addEventListener("DOMContentLoaded", () => {
+export function initExpandables() {
     document.querySelectorAll(".expandable-container").forEach(container => {
         const button = container.querySelector(".expandable-button");
         const content = container.querySelector(".expandable-content");
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
             button.addEventListener("mouseleave", () => (button.style.background = base));
         }
     });
-});
+}
 
 /* ---------- helpers -------------------------------------------- */
 function darkenColor(hex, pct) {
@@ -308,3 +308,4 @@ function closeOverlay() {
     // Restore page scrolling
     document.body.style.overflow = "";
 }
+window.closeOverlay = closeOverlay;

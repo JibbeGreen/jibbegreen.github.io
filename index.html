@@ -15,16 +15,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/pages/projects.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/base/global.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
-    <script type="module" src="/js/scripts/injectHTML.js"></script>
-    <script src="/js/scripts/header-animation.js" defer></script>
-    <script src="/js/scripts/project-card-anim.js" defer></script>
-    <script src="/js/scripts/mode-toggle.js"></script>
-    <script src="/js/scripts/loading-manager.js"></script>
+    <link rel="stylesheet" href="css/pages/about.css">
+        <script type="module" src="/js/scripts/main.js"></script>
 </head>
 
 <body>
@@ -32,7 +31,7 @@
 
     <header class="index-header">
         <h1>JIBBE WIEMAN</h1>
-        <p>CMGT Student | Programmer | Content Creator</p>
+        <p>C# Programmer | Content Creator | CMGT Student</p>
     </header>
     <div class="main-wrapper">
         <main>
@@ -49,7 +48,6 @@
                         and feel free to get in touch if you'd like to collaborate or learn more about my work.
                     </p>
 
-                    <div id="distinctions-placeholder"></div>
                     <div class="button-row" style="display: flex; gap: 1rem; flex-wrap: wrap;">
                         <button class="portfolio-button" onclick="window.location.href='./projects.html';">
                             <img src="assets/images/icons/folderFilled.png" alt="Folder Filled Icon" class="portfolio-icon">
@@ -70,6 +68,8 @@
                         <div class="tech-item"><img src="assets/images/icons/davinci-resolve.png" alt="C++"> Davinci Resolve</div>
                         <div class="tech-item"><img src="assets/images/icons/photoshop.png" alt="Photoshop"> Photoshop</div>
                     </div>
+
+                    <div id="distinctions-placeholder"></div>
                 </div>
                 <div class="index-about-image-wrapper">
                     <img src="assets/images/sexy-man.jpg" alt="Sexy Man" class="index-about-image">

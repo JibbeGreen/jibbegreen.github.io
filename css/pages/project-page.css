@@ -1,4 +1,4 @@
-﻿@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .project-sidebar {
         background-color: var(--card-color);
         padding: 1rem;
@@ -305,13 +305,13 @@
 
 .line-number {
     width: 3em;
-    /* reserve space for 3‑digit lines */
+    /* reserve space for 3-digit lines */
     text-align: right;
     margin-right: 1em;
     user-select: none;
     opacity: 0.4;
     color: #888;
-    /* line‑number color */
+    /* line-number color */
     flex-shrink: 0;
 }
 
@@ -547,42 +547,42 @@ img {
 
 /* Background for Phobophobia */
 .phobophobia-header {
-    background-image: url('../assets/images/phobophobia/banner.jpg');
+    background-image: url('../../assets/images/phobophobia/banner.jpg');
 }
 
 /* Background for Revenge of the Renter */
 .revenge-of-the-renter-header {
-    background-image: url('../assets/images/revenge-of-the-renter/banner.jpg');
+    background-image: url('../../assets/images/revenge-of-the-renter/banner.jpg');
 }
 
 /* Background for Mechmates */
 .mechmates-header {
-    background-image: url('../assets/images/mechmates/banner.jpg');
+    background-image: url('../../assets/images/mechmates/banner.jpg');
 }
 
 /* Background for The News */
 .the-news-header {
-    background-image: url('../assets/images/the-news/banner.jpg');
+    background-image: url('../../assets/images/the-news/banner.jpg');
 }
 
 /* Background for Noorderpoort Escape Room */
 .noorderpoort-header {
-    background-image: url('../assets/images/noorderpoort/banner.jpg');
+    background-image: url('../../assets/images/noorderpoort/banner.jpg');
 }
 
 /* Background for Skill Tree */
 .skill-tree-header {
-    background-image: url('../assets/images/skill-tree/banner.jpg');
+    background-image: url('../../assets/images/skill-tree/banner.jpg');
 }
 
 /* Background for Project Parasite */
 .project-parasite-header {
-    background-image: url('../assets/images/project-parasite/banner.jpg');
+    background-image: url('../../assets/images/project-parasite/banner.jpg');
 }
 
 /* Background for Disobey Me */
 .disobey-me-header {
-    background-image: url('../assets/images/disobey-me/banner2.jpg');
+    background-image: url('../../assets/images/disobey-me/banner2.jpg');
 }
 
 /* Overlay with slight black */

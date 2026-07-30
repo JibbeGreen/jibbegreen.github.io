@@ -1,4 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () {
+import { injectHTML } from './injectHTML.js';
+import { initNav } from './nav.js';
+import { initThemeToggle } from './mode-toggle.js';
+import { initHeaderAnim } from './header-animation.js';
+import { initProjectCards } from './project-card-anim.js';
+import { initExpandables } from './expandable-section.js';
+import { initLoadingManager } from './loading-manager.js';
+
+export function initTagFiltering() {
     const tags = document.querySelectorAll('.tags-container .tag'); // External tags
     const projectTags = document.querySelectorAll('.project-card .tag'); // Internal tags
     const projectCards = document.querySelectorAll('.project-card');
@@ -19,12 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add click event to external tags
     tags.forEach(tag => {
         tag.addEventListener('click', function () {
-            // Remove active class from all tags
             tags.forEach(tag => tag.classList.remove('active'));
-
-            // Add active class to the clicked tag
             tag.classList.add('active');
-
             const filter = tag.getAttribute('data-tag');
             filterProjects(filter);
         });
@@ -34,40 +38,26 @@ document.addEventListener('DOMContentLoaded', function () {
     projectTags.forEach(tag => {
         tag.addEventListener('click', function () {
             const filter = tag.getAttribute('data-tag');
-
-            // Trigger the same logic as external tags
             tags.forEach(tag => tag.classList.remove('active'));
             const matchingExternalTag = [...tags].find(t => t.getAttribute('data-tag') === filter);
             if (matchingExternalTag) {
                 matchingExternalTag.classList.add('active');
             }
-
             filterProjects(filter);
         });
     });
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // 1. Inject common HTML snippets (nav, footer, etc.) and render projects
+    await injectHTML();
+
+    // 2. Initialize all modules
+    if (typeof initNav === 'function') initNav();
+    if (typeof initThemeToggle === 'function') initThemeToggle();
+    if (typeof initHeaderAnim === 'function') initHeaderAnim();
+    if (typeof initProjectCards === 'function') initProjectCards();
+    if (typeof initExpandables === 'function') initExpandables();
+    if (typeof initTagFiltering === 'function') initTagFiltering();
+    if (typeof initLoadingManager === 'function') initLoadingManager();
 });
-
-//// Highlight current page in the navbar
-//const currentPath = window.location.pathname;
-//const navLinks = document.querySelectorAll('nav ul li a');
-
-//navLinks.forEach(link => {
-//    if (link.getAttribute('href').includes(currentPath)) {
-//        link.classList.add('active');
-//    }
-//});
-
-/*// Hamburger button*/
-//document.addEventListener('DOMContentLoaded', () => {
-//    if (window.innerWidth <= 768) { // Adjust breakpoint as needed
-//        const hamburger = document.querySelector('.hamburger-menu');
-//        const overlay = document.querySelector('.overlay');
-
-//        if (hamburger && overlay) {
-//            hamburger.addEventListener('click', () => {
-//                overlay.classList.toggle('active');
-//                hamburger.classList.toggle('open');
-//            });
-//        }
-//    }
-//});
