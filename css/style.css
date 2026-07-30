@@ -263,7 +263,7 @@ button:focus {
     z-index: 4;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin-top: auto;
-    margin-bottom: 4vh;
+    margin-bottom: 1vw;
 }
 
 #drag-button img {
