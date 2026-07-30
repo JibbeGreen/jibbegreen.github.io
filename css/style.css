@@ -667,3 +667,42 @@ header.index-header::before {
     -webkit-mask: url('../assets/images/icons/trophy.svg') no-repeat center / contain;
     mask: url('../assets/images/icons/trophy.svg') no-repeat center / contain;
 }
+
+/* Tech Stack Row */
+.tech-stack-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    margin-top: 2vh;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 0.9vw;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.tech-item img {
+    height: 1.5vw;
+    width: auto;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+    .tech-stack-row {
+        gap: 3vw;
+        margin-top: 2vh;
+        justify-content: center;
+    }
+    .tech-item {
+        font-size: 3vw;
+        gap: 1.5vw;
+    }
+    .tech-item img {
+        height: 5vw;
+    }
+}
