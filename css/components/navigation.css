@@ -70,10 +70,18 @@ nav ul li a img {
     height: 1.2vw;
     margin-right: 0.4vw;
     filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #00b57f;
+}
+
+nav ul li a:hover img,
+nav ul li a.active img,
+.overlay ul li a.active img {
+    /* Filter approximates #00b57f */
+    filter: brightness(0) saturate(100%) invert(56%) sepia(87%) saturate(2254%) hue-rotate(119deg) brightness(98%) contrast(105%);
 }
 
 /* Button Styling */
@@ -112,150 +120,15 @@ nav ul li a:hover {
 
 /* CSS filters are now handled in style.css */
 
-.active {
+nav ul li a.active,
+.overlay ul li a.active {
     color: #00b57f;
     /* Bright green */
     text-decoration: underline;
-    /* Underline the link */
-}
-
-/* Portfolio Button */
-/* Prevent a from affecting button styles */
-.portfolio-link {
-    display: block;
-    /* Makes the entire <a> clickable, ensuring no layout change */
-    text-decoration: none;
-    /* Remove any default link styles */
-}
-
-/* Portfolio Button Styles */
-.portfolio-button {
-    display: flex;
-    align-items: center;
-    align-self: center;
-    /* Ensures the button aligns with other nav elements */
-    justify-content: center;
-    padding: 0.7vw 1.4vw;
-    /* Button size */
-    line-height: 1vw;
-    border: .1vw solid white;
-    color: white;
-    text-transform: uppercase;
-    font-size: .9vw;
+    text-decoration-color: #00b57f;
+    text-decoration-thickness: .1vw;
+    text-underline-offset: .3vw;
     font-weight: bold;
-    background: #00b57f;
-    /* Default button background */
-    border-radius: 3vw;
-    margin: 0 .8vw 0 auto;
-    /* Auto aligns to the right */
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease;
-}
-
-.portfolio-button:hover {
-    background-color: #008f68;
-    /* Darker green on hover */
-}
-
-.portfolio-button:focus {
-    box-shadow: 0 0 6px rgba(0, 191, 127, 0.5);
-    /* Soft green glow */
-}
-
-/* Remove link text color change */
-.portfolio-link:focus,
-.portfolio-link:hover {
-    text-decoration: none;
-    color: inherit;
-    /* Keeps the button text color intact */
-}
-
-/* Red fill-in animation */
-.portfolio-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: red;
-    border-radius: 2vw;
-    z-index: 2;
-    /* Raised above the text/icon */
-    transition: width 0.4s ease;
-}
-
-.portfolio-button:hover::before {
-    width: 100%;
-    /* Fills from left to right */
-}
-
-/* Wrapper for text and icon */
-.portfolio-button .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    z-index: 3;
-    /* Higher than the red fill */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Portfolio text */
-.portfolio-button .portfolio-text {
-    margin-right: 0rem;
-    /* Gap between text and icon */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    /* Individual animation */
-}
-
-/* Portfolio icon */
-.portfolio-button .portfolio-icon {
-    width: 1vw;
-    height: 1vw;
-    padding-right: .3vw;
-    filter: brightness(0) invert(1);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    /* Individual animation */
-}
-
-/* Hover effects to move down and fade out */
-.portfolio-button:hover .portfolio-text,
-.portfolio-button:hover .portfolio-icon {
-    transform: translateY(100%);
-    /* Moves down */
-    opacity: 0;
-    /* Fades out */
-}
-
-/* Keep the content wrapper hidden during hover */
-.portfolio-button:hover .content {
-    opacity: 0;
-    /* Ensure full fade-out for the entire content container */
-}
-
-/* Open text animation */
-.portfolio-button .open-text {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    /* Adjust for proper centring */
-    opacity: 0;
-    z-index: 5;
-    /* Highest to ensure visibility */
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.portfolio-button:hover .open-text {
-    transform: translate(0, -50%);
-    /* Slide in horizontally, maintain vertical centring */
-    opacity: 1;
-    /* Fade in */
 }
 
 /* Mobile Styles */
@@ -284,41 +157,6 @@ nav ul li a:hover {
         /* Stack nav items */
         align-items: center;
         gap: 0.5rem;
-    }
-
-    nav ul li {
-        margin: 0;
-    }
-
-    .portfolio-button {
-        display: flex;
-        align-items: center;
-        align-self: center;
-        /* Ensures the button aligns with other nav elements */
-        justify-content: center;
-        padding: 2vw 4vw;
-        /* Button size */
-        line-height: 1vw;
-        border: .1vw solid white;
-        color: white;
-        text-transform: uppercase;
-        font-size: 2vw;
-        font-weight: bold;
-        background: #00b57f;
-        /* Default button background */
-        border-radius: 3vw;
-        margin: 0 3vw 0 auto;
-        /* Auto aligns to the right */
-        position: relative;
-        overflow: hidden;
-        transition: color 0.3s ease;
-    }
-
-    /* Portfolio icon */
-    .portfolio-button .portfolio-icon {
-        width: 3vw;
-        height: 3vw;
-        padding-right: .3vw;
     }
 
     nav .logo img {

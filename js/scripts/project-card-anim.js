@@ -1,4 +1,4 @@
-﻿class PanelScroll {
+class PanelScroll {
     constructor(containerSelector, scrollSpeed = 1) {
         this.container = document.querySelector(containerSelector);
         this.cards = Array.from(this.container.children);
@@ -16,6 +16,7 @@
 
     init() {
         this.positionCards();
+        this.updateContainerHeight();
         this.container.addEventListener("mousedown", this.startDrag.bind(this));
         document.addEventListener("mousemove", this.handleDrag.bind(this));
         document.addEventListener("mouseup", this.stopDrag.bind(this));
@@ -24,7 +25,25 @@
         this.container.addEventListener("mouseleave", () => (this.isPaused = false));
         window.addEventListener('resize', this.handleResize.bind(this));
 
+        // Use ResizeObserver to detect changes in card content height
+        const resizeObserver = new ResizeObserver(() => this.updateContainerHeight());
+        this.cards.forEach(card => resizeObserver.observe(card));
+
         requestAnimationFrame(this.update.bind(this));
+    }
+
+    updateContainerHeight() {
+        // Find the tallest card
+        let maxHeight = 0;
+        this.cards.forEach(card => {
+            if (card.offsetHeight > maxHeight) {
+                maxHeight = card.offsetHeight;
+            }
+        });
+        
+        // Add a small buffer for top positioning and padding
+        const topOffset = window.innerHeight * 0.01; // 1vh
+        this.container.style.height = `${maxHeight + topOffset}px`;
     }
 
     handleResize() {
@@ -164,20 +183,19 @@
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+export function initProjectCards() {
+    const dragButton = document.getElementById("drag-button");
+    const projectsContainer = document.querySelector(".projects-container");
+    if (!dragButton || !projectsContainer) return;
+    
     if (window.matchMedia("(min-width: 769px)").matches) {
         new PanelScroll(".projects-container", 0.35);
     }
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-    const projectsContainer = document.querySelector(".projects-container");
-    if (projectsContainer) {
-        projectsContainer.addEventListener("dragstart", (event) => {
-            event.preventDefault();
-        });
-    }
-});
+    projectsContainer.addEventListener("dragstart", (event) => {
+        event.preventDefault();
+    });
+}
 
 //snapToNearestCard() {
 //    let firstCard = this.cards[0];

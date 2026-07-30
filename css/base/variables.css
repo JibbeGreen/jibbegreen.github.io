@@ -1,0 +1,62 @@
+/* WIDE SCREENS */
+:root {
+    --recontent-width: calc(80vw);
+    /* Define a reusable width */
+
+    --background-color: #f0f7f4; /* light minty green */
+    --card-color: #e3eee9;
+    --text-color: #1a241f; /* dark green-tinted text */
+    --tag-color: #cbe0d7;
+    --tag2-color: #d6e9df;
+    --border-color: #cbe0d7;
+    --tech-stack-color: #ffffff;
+    --footer-color: #08110c; /* very dark green */
+    --expandable-color: #dbe8e1;
+    --divider-color: rgba(0, 181, 127, 0.2);
+    --header-font-weight: 800;
+    --featured-projects-color: rgba(255, 255, 255, 0.6);
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dark-mode {
+    --background-color: #08110c; /* very dark green-black */
+    --card-color: #111d18; /* slightly lighter dark green */
+    --text-color: #ffffff;
+    --tag-color: #1b2e25;
+    --tag2-color: #13221b;
+    --border-color: #1b2e25;
+    --tech-stack-color: #111d18;
+    --expandable-color: #0d1713;
+    --divider-color: rgba(0, 181, 127, 0.2);
+    --featured-projects-color: rgba(20, 20, 20, 0.6);
+}
+
+/* Handle the theme toggle icons (they are white in source) */
+#theme-toggle .theme-icon-dark {
+    display: none;
+}
+
+.dark-mode #theme-toggle .theme-icon-light {
+    display: none;
+}
+
+.dark-mode #theme-toggle .theme-icon-dark {
+    display: inline-block;
+}
+
+#theme-toggle img {
+    filter: invert(1) !important;
+    /* Make white icons black in light mode */
+    transition: filter 0.2s ease;
+}
+
+.dark-mode #theme-toggle img {
+    filter: invert(0) !important;
+    /* Keep white icons white in dark mode */
+}
+
+/* Invert black unity logo in dark mode */
+.dark-mode img[src*="unity.svg"] {
+    filter: invert(1);
+}
