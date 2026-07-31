@@ -47,7 +47,7 @@
 .back-btn {
     background: transparent;
     border: none;
-    color: var(--text-color);
+    color: white;
     font-size: clamp(6.9px, 0.9vw, 34.6px);
     font-weight: 500;
     cursor: pointer;
@@ -333,7 +333,7 @@ html.dark-mode .invert-icon {
     line-height: 1.6;
     margin-bottom: clamp(7.7px, 1vw, 38.4px);
     margin-left: 0; /* Make sure it's aligned to the left edge */
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-color);
 }
 #dynamic-content-placeholder h2 {
     font-size: clamp(13.8px, 1.8vw, 69.1px);
@@ -354,7 +354,7 @@ html.dark-mode .invert-icon {
 }
 .expandable-button {
     background: var(--card-color);
-    color: white;
+    color: var(--text-color);
     border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
     padding: clamp(7.7px, 0.5vw, 38.4px);
