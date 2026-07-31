@@ -4,7 +4,7 @@
     .projects-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr); /* 4 equal-width columns */
-        gap: 2vw; /* Adjust the gap between cards */
+        gap: clamp(15.4px, 2vw, 76.8px); /* Adjust the gap between cards */
         padding-top: .5vh;
         padding-bottom: 2vh;
         justify-items: center; /* Stretch the cards to fill the column width */
@@ -14,11 +14,11 @@
         display: flex;
         flex-direction: column;
         background: var(--card-color);
-        border-radius: 0.75vw;
+        border-radius: clamp(5.8px, 0.75vw, 28.8px);
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        aspect-ratio: 1 / 1.3;
+        aspect-ratio: 1 / 1.5;
         width: 100%;
         height: auto;
         box-sizing: border-box; /* Include padding and borders in width/height */
@@ -26,23 +26,25 @@
     }
 
         .project-card > a > img {
-            height: 45%;
+            height: 40%;
+            width: 100%;
             flex-grow: 0;
+            flex-shrink: 0;
             object-fit: cover;
         }
 
         .project-card h3 {
-            font-size: 5.25vw;
+            font-size: clamp(40.3px, 5.25vw, 201.6px);
             margin: 0;
-            padding-left: 1vw;
+            padding-left: clamp(7.7px, 1vw, 38.4px);
             color: var(--text-color);
         }
 
         .project-card p {
-            font-size: 3vw;
-            margin-top: 0.5vw;
-            padding-left: 1vw;
-            padding-right: 1vw;
+            font-size: clamp(23px, 3vw, 115.2px);
+            margin-top: clamp(3.8px, 0.5vw, 19.2px);
+            padding-left: clamp(7.7px, 1vw, 38.4px);
+            padding-right: clamp(7.7px, 1vw, 38.4px);
             color: var(--text-color);
         }
 
@@ -54,8 +56,8 @@
             justify-content: start; /* Align tags to the left */
             overflow: hidden;
             padding: 0;
-            padding-top: 0.5vw;
-            padding-left: 1vw;
+            padding-top: clamp(3.8px, 0.5vw, 19.2px);
+            padding-left: clamp(7.7px, 1vw, 38.4px);
             max-width: 100%; /* Ensure tags stay within the card width */
             box-sizing: border-box; /* Ensure consistent sizing */
         }
@@ -63,12 +65,12 @@
             /* Individual Tag Styles */
             .project-card .tags span {
                 background: var(--tag-color);
-                padding: 1.2vw 2.4vw;
+                padding: clamp(9.2px, 1.2vw, 46.1px) clamp(18.4px, 2.4vw, 92.2px);
                 margin: 0;
-                margin-top: 1.5vw;
-                margin-right: 1.5vw;
-                border-radius: 1.5vw;
-                font-size: 2.8vw;
+                margin-top: clamp(11.5px, 1.5vw, 57.6px);
+                margin-right: clamp(11.5px, 1.5vw, 57.6px);
+                border-radius: clamp(11.5px, 1.5vw, 57.6px);
+                font-size: clamp(21.5px, 2.8vw, 107.5px);
                 font-weight: bold;
                 color: var(--text-color);;
                 white-space: nowrap; /* Prevent line breaks in tags */
@@ -85,28 +87,28 @@
 .featured-projects-wrapper {
     background: var(--featured-projects-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1vw;
-    padding: 2vw 2vw 1vw 2vw; /* Reduced bottom padding */
-    margin-top: 1vw;
-    margin-bottom: 2vw; /* Reduced margin */
+    border-radius: clamp(7.7px, clamp(7.7px, 1vw, 38.4px), 38.4px);
+    padding: clamp(15.4px, clamp(15.4px, 2vw, 76.8px), 76.8px) clamp(15.4px, clamp(15.4px, 2vw, 76.8px), 76.8px) clamp(7.7px, clamp(7.7px, 1vw, 38.4px), 38.4px) clamp(15.4px, clamp(15.4px, 2vw, 76.8px), 76.8px); /* Reduced bottom padding */
+    margin-top: clamp(7.7px, clamp(7.7px, 1vw, 38.4px), 38.4px);
+    margin-bottom: clamp(15.4px, clamp(15.4px, 2vw, 76.8px), 76.8px); /* Reduced margin */
 }
 
 .featured-projects-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2vh;
+    margin-bottom: clamp(12px, 2vh, 43.2px);
 }
 
 .featured-title {
     display: flex;
     align-items: center;
-    gap: 0.8vw;
+    gap: clamp(6.1px, clamp(6.1px, 0.8vw, 30.7px), 30.7px);
 }
 
 .featured-title .green-dot {
-    width: 0.8vw;
-    height: 0.8vw;
+    width: clamp(6.1px, clamp(6.1px, 0.8vw, 30.7px), 30.7px);
+    height: clamp(6.1px, clamp(6.1px, 0.8vw, 30.7px), 30.7px);
     background-color: #00b57f;
     border-radius: 50%;
     display: inline-block;
@@ -114,7 +116,7 @@
 
 .featured-title h2 {
     margin: 0;
-    font-size: 1.3vw;
+    font-size: clamp(10px, clamp(10px, 1.3vw, 49.9px), 49.9px);
     font-weight: bold;
 }
 
@@ -122,7 +124,7 @@
     color: #00b57f;
     font-weight: bold;
     text-decoration: none;
-    font-size: 0.9vw;
+    font-size: clamp(6.9px, clamp(6.9px, 0.9vw, 34.6px), 34.6px);
     display: flex;
     align-items: center;
     transition: color 0.3s ease;
@@ -134,9 +136,9 @@
 }
 
 .arrow-icon {
-    height: 0.9vw;
+    height: clamp(6.9px, clamp(6.9px, 0.9vw, 34.6px), 34.6px);
     width: auto;
-    margin-left: 0.4vw;
+    margin-left: clamp(3.1px, clamp(3.1px, 0.4vw, 15.4px), 15.4px);
     /* Filter approximates #00b57f */
     filter: brightness(0) saturate(100%) invert(56%) sepia(87%) saturate(2254%) hue-rotate(119deg) brightness(98%) contrast(105%);
     transition: transform 0.3s ease;
@@ -150,54 +152,54 @@
 /* Mobile Featured Projects Adjustments */
 @media screen and (max-width: 768px) {
     .featured-projects-wrapper {
-        padding: 4vw;
-        border-radius: 3vw;
+        padding: clamp(30.7px, 4vw, 153.6px);
+        border-radius: clamp(23px, 3vw, 115.2px);
     }
     
     .featured-title h2 {
-        font-size: 4vw;
+        font-size: clamp(30.7px, 4vw, 153.6px);
     }
     
     .featured-title .green-dot {
-        width: 2vw;
-        height: 2vw;
+        width: clamp(15.4px, 2vw, 76.8px);
+        height: clamp(15.4px, 2vw, 76.8px);
     }
     
     .see-all-link {
-        font-size: 3vw;
+        font-size: clamp(23px, 3vw, 115.2px);
     }
 
     .statistics-wrapper {
         flex-direction: column !important;
-        gap: 3vw !important;
-        border-radius: 3vw !important;
-        padding: 4vw !important;
-        margin-bottom: 4vw !important;
+        gap: clamp(23px, 3vw, 115.2px) !important;
+        border-radius: clamp(23px, 3vw, 115.2px) !important;
+        padding: clamp(30.7px, 4vw, 153.6px) !important;
+        margin-bottom: clamp(30.7px, 4vw, 153.6px) !important;
     }
     .stat-item {
         justify-content: flex-start !important;
         width: 100% !important;
-        gap: 4vw !important;
+        gap: clamp(30.7px, 4vw, 153.6px) !important;
         padding: 0 !important;
     }
     .stat-item:not(:last-child) {
         border-right: none !important;
         border-bottom: 1px solid var(--divider-color);
-        padding-bottom: 3vw !important;
+        padding-bottom: clamp(23px, 3vw, 115.2px) !important;
     }
     .stat-icon-container {
-        width: 12vw !important;
-        height: 12vw !important;
+        width: clamp(92.2px, 12vw, 460.8px) !important;
+        height: clamp(92.2px, 12vw, 460.8px) !important;
     }
     .stat-icon {
-        width: 6vw !important;
-        height: 6vw !important;
+        width: clamp(46.1px, 6vw, 230.4px) !important;
+        height: clamp(46.1px, 6vw, 230.4px) !important;
     }
     .stat-text h3 {
-        font-size: 5vw !important;
+        font-size: clamp(38.4px, 5vw, 192px) !important;
     }
     .stat-text p {
-        font-size: 3.5vw !important;
+        font-size: clamp(26.9px, 3.5vw, 134.4px) !important;
     }
 }
 
@@ -205,22 +207,22 @@
 .statistics-wrapper {
     background: var(--featured-projects-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1vw;
-    padding: 1.5vw;
-    margin-bottom: 2vw;
+    border-radius: clamp(7.7px, clamp(7.7px, 1vw, 38.4px), 38.4px);
+    padding: clamp(11.5px, clamp(11.5px, 1.5vw, 57.6px), 57.6px);
+    margin-bottom: clamp(15.4px, clamp(15.4px, 2vw, 76.8px), 76.8px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1vw;
+    gap: clamp(7.7px, clamp(7.7px, 1vw, 38.4px), 38.4px);
 }
 
 .stat-item {
     display: flex;
     align-items: center;
-    gap: 1vw;
+    gap: clamp(7.7px, clamp(7.7px, 1vw, 38.4px), 38.4px);
     flex: 1;
     justify-content: center;
-    padding: 0 1vw;
+    padding: 0 clamp(7.7px, clamp(7.7px, 1vw, 38.4px), 38.4px);
 }
 
 .stat-item:not(:last-child) {
@@ -229,8 +231,8 @@
 
 .stat-icon-container {
     background-color: rgba(0, 181, 127, 0.1);
-    width: 3.5vw;
-    height: 3.5vw;
+    width: clamp(26.9px, clamp(26.9px, 3.5vw, 134.4px), 134.4px);
+    height: clamp(26.9px, clamp(26.9px, 3.5vw, 134.4px), 134.4px);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -239,8 +241,8 @@
 }
 
 .stat-icon {
-    width: 1.8vw;
-    height: 1.8vw;
+    width: clamp(13.8px, clamp(13.8px, 1.8vw, 69.1px), 69.1px);
+    height: clamp(13.8px, clamp(13.8px, 1.8vw, 69.1px), 69.1px);
     color: #00b57f;
 }
 
@@ -251,15 +253,15 @@
 
 .stat-text h3 {
     margin: 0;
-    font-size: 1.6vw;
+    font-size: clamp(12.3px, clamp(12.3px, 1.6vw, 61.4px), 61.4px);
     font-weight: 800;
     color: var(--text-color);
 }
 
 .stat-text p {
     margin: 0;
-    margin-top: 0.2vw;
-    font-size: 0.9vw;
+    margin-top: clamp(1.5px, clamp(1.5px, 0.2vw, 7.7px), 7.7px);
+    font-size: clamp(6.9px, clamp(6.9px, 0.9vw, 34.6px), 34.6px);
     color: var(--text-color);
     opacity: 0.8;
 }
@@ -270,7 +272,7 @@
         display: grid;
         position: relative; /* Ensure scrollbar is positioned relative to this */
         grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
-        gap: 2vw; /*Adjust the gap between cards */
+        gap: clamp(15.4px, 2vw, 76.8px); /*Adjust the gap between cards */
         padding-top: .5vh;
         padding-bottom: 2vh;
         justify-items: stretch; /*Stretch the cards to fill the column width */
@@ -289,15 +291,15 @@
         }
 
     .project-card h3 {
-        font-size: 1.25vw;
+        font-size: clamp(9.6px, 1.25vw, 48px);
         margin: 0;
         color: var(--text-color);
     }
 
     .project-card p {
-        font-size: 0.9vw;
-        margin-top: 0.4vw;
-        margin-bottom: 0.5vw;
+        font-size: clamp(6.9px, 0.9vw, 34.6px);
+        margin-top: clamp(3.1px, 0.4vw, 15.4px);
+        margin-bottom: clamp(3.8px, 0.5vw, 19.2px);
         color: var(--text-color);
     }
 
@@ -309,7 +311,7 @@
     justify-content: start; /* Align tags to the left */
     overflow: hidden;
     padding: 0;
-    padding-top: 0.5vw;
+    padding-top: clamp(3.8px, 0.5vw, 19.2px);
     max-width: 100%; /* Ensure tags stay within the card width */
     box-sizing: border-box; /* Ensure consistent sizing */
 }
@@ -317,12 +319,12 @@
         /* Individual Tag Styles */
         .project-card .tags span {
             background: var(--tag-color); /* Light grey */
-            padding: 0.2vw 0.4vw;
+            padding: clamp(1.5px, 0.2vw, 7.7px) clamp(3.1px, 0.4vw, 15.4px);
             margin: 0;
-            margin-top: 0.3vw;
-            margin-right: 0.3vw;
-            border-radius: 0.3125vw;
-            font-size: 0.8vw;
+            margin-top: clamp(2.3px, 0.3vw, 11.5px);
+            margin-right: clamp(2.3px, 0.3vw, 11.5px);
+            border-radius: clamp(2.4px, 0.3125vw, 12px);
+            font-size: clamp(6.1px, 0.8vw, 30.7px);
             font-weight: bold;
             color: var(--text-color);
             white-space: nowrap; /* Prevent line breaks in tags */
@@ -331,24 +333,26 @@
         }
 
     .project-card {
-        flex: 0 0 calc(25% - 2vw); /* Adjust width for proper alignment */
+        flex: 0 0 calc(25% - clamp(15.4px, 2vw, 76.8px)); /* Adjust width for proper alignment */
         min-width: 250px; /* Ensure cards don’t shrink too much */
         display: flex;
         flex-direction: column;
         background-color: var(--card-color);
-        border-radius: 0.75vw;
+        border-radius: clamp(5.8px, 0.75vw, 28.8px);
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        aspect-ratio: 1 / 1.15;
+        aspect-ratio: 1 / 1.5;
         width: 100%;
         height: auto;
         box-sizing: border-box; /* Include padding and borders in width/height */
     }
 
         .project-card > a > img {
-            height: 30%;
+            height: 27%;
+            width: 100%;
             flex-grow: 0;
+            flex-shrink: 0;
             object-fit: cover;
         }
 }
@@ -368,7 +372,7 @@
 
 
         .project-card .card-content {
-            padding: 1.5vw;
+            padding: clamp(11.5px, clamp(11.5px, 1.5vw, 57.6px), 57.6px);
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -377,13 +381,13 @@
         .project-type-tag {
             background-color: #6b21a8; /* Purple color */
             color: white;
-            font-size: 0.7vw;
+            font-size: clamp(5.4px, clamp(5.4px, 0.7vw, 26.9px), 26.9px);
             font-weight: bold;
-            padding: 0.3vw 0.6vw;
-            border-radius: 0.4vw;
+            padding: clamp(2.3px, clamp(2.3px, 0.3vw, 11.5px), 11.5px) clamp(4.6px, clamp(4.6px, 0.6vw, 23px), 23px);
+            border-radius: clamp(3.1px, clamp(3.1px, 0.4vw, 15.4px), 15.4px);
             align-self: flex-start;
-            margin-top: -2.3vw; /* Aligns with the edge of the image */
-            margin-bottom: 0.4vw;
+            margin-top: -clamp(17.7px, clamp(17.7px, 2.3vw, 88.3px), 88.3px); /* Aligns with the edge of the image */
+            margin-bottom: clamp(3.1px, clamp(3.1px, 0.4vw, 15.4px), 15.4px);
             text-transform: uppercase;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
             z-index: 10;
@@ -391,22 +395,22 @@
         
         @media screen and (max-width: 768px) {
             .project-type-tag {
-                font-size: 2.5vw;
-                padding: 0.5vw 1.5vw;
-                border-radius: 1vw;
-                margin-top: -4.5vw;
-                margin-bottom: 1vw;
+                font-size: clamp(19.2px, 2.5vw, 96px);
+                padding: clamp(3.8px, 0.5vw, 19.2px) clamp(11.5px, 1.5vw, 57.6px);
+                border-radius: clamp(7.7px, 1vw, 38.4px);
+                margin-top: -clamp(34.6px, 4.5vw, 172.8px);
+                margin-bottom: clamp(7.7px, 1vw, 38.4px);
             }
         }
 
         .view-project-link {
             margin-top: auto;
             color: #00b57f;
-            font-size: 0.9vw;
+            font-size: clamp(6.9px, clamp(6.9px, 0.9vw, 34.6px), 34.6px);
             font-weight: bold;
             display: flex;
             align-items: center;
-            padding-top: 1vw;
+            padding-top: clamp(7.7px, clamp(7.7px, 1vw, 38.4px), 38.4px);
             transition: color 0.3s ease;
         }
         
@@ -416,8 +420,8 @@
 
         @media screen and (max-width: 768px) {
             .view-project-link {
-                font-size: 3.5vw;
-                padding-top: 3vw;
+                font-size: clamp(26.9px, 3.5vw, 134.4px);
+                padding-top: clamp(23px, 3vw, 115.2px);
             }
         }
 
@@ -443,9 +447,9 @@
 .tag {
     display: inline-block;
     background: var(--tag2-color);
-    padding: 0.5vw .7vw; /* tb - rl*/
-    margin: 0.4vw;
-    border-radius: 0.5vw;
+    padding: clamp(3.8px, clamp(3.8px, 0.5vw, 19.2px), 19.2px) clamp(5.4px, clamp(5.4px, 0.7vw, 26.9px), 26.9px); /* tb - rl*/
+    margin: clamp(3.1px, clamp(3.1px, 0.4vw, 15.4px), 15.4px);
+    border-radius: clamp(3.8px, clamp(3.8px, 0.5vw, 19.2px), 19.2px);
     color: var(--text-color);
     font-size: .9rem;
     font-weight: bold;

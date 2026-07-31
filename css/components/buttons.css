@@ -6,7 +6,7 @@ button {
     background-color: #00b57f;
     color: white;
     padding: 0.8rem 1.2rem;
-    border-radius: 2vw;
+    border-radius: clamp(15.4px, 2vw, 76.8px);
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 1rem;
     margin-bottom: 1rem;

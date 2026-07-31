@@ -52,7 +52,7 @@
         width: 16rem; /* Set the width of the wrapper */
         height: 24rem; /* Set the height of the wrapper to be square */
         overflow: hidden; /* Hide the overflow to create the circular effect */
-        border-radius: 1vw; /*round out the corners slightly*/
+        border-radius: clamp(7.7px, 1vw, 38.4px); /*round out the corners slightly*/
         display: flex; /* Ensure the image is centered inside */
         justify-content: center;
         align-items: center;
