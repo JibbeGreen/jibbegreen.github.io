@@ -1,644 +1,454 @@
-@media screen and (max-width: 768px) {
-    .project-sidebar {
-        background-color: var(--card-color);
-        padding: 1rem;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-        border-radius: 0 0 10px 10px;
-        max-width: 22vw;
-        position: absolute;
-        /* Take it out of document flow */
-        top: 0;
-        /* Align to the top */
-        right: 0;
-        /* Align to the right inside .main-wrapper */
-    }
+/* ==========================================================================
+   Project Page Redesign CSS
+   ========================================================================== */
 
-    .arrow-button {
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 5vw;
-        height: 5vw;
-        background-color: #f0f0f0;
-        /* Light grey background */
-        border: none;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 1000;
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .arrow-left {
-        left: 2px;
-        /* Position on the left side */
-    }
-
-    .arrow-right {
-        right: 2px;
-        /* Position on the right side */
-    }
-
-    iframe {
-        width: 100%;
-        /* Fixed width */
-        height: 50%;
-        /* Fixed height */
-        border-radius: 10px;
-    }
-
-    /* Sidebar details formatting */
-    .project-sidebar .project-details {
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        gap: 0.5rem 1rem;
-        font-size: 1vw;
-        line-height: 1.5;
-    }
-
-    .expandable-container {
-        width: auto;
-        /* Set a fixed width */
-        margin-bottom: 5px;
-    }
-
-    .phobophobia-header,
-    .project-parasite-header,
-    .disobey-me-header,
-    .revenge-of-the-renter-header,
-    .mechmates-header,
-    .the-news-header,
-    .skill-tree-header,
-    .noorderpoort-header {
-        position: relative;
-        /* Ensure the overlay is positioned correctly */
-        background-size: cover;
-        background-position: center;
-        color: white;
-        /* Make sure text is readable on dark overlay */
-        height: 70vw;
-    }
-
-    .text-wrapper {
-        max-width: 100vw;
-    }
-
-    .content-wrapper {
-        max-width: calc(var(--recontent-width));
-    }
-
-    .expandable-container {
-        width: 100%;
-        /* Set a fixed width */
-    }
-}
-
-@media screen and (min-width: 769px) {
-
-    .text-wrapper {
-        max-width: 55vw;
-        text-align: left;
-    }
-
-    .project-sidebar {
-        background-color: var(--card-color);
-        padding: 1rem;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-        border-radius: 0 0 10px 10px;
-        max-width: 20rem;
-        position: absolute;
-        /* Take it out of document flow */
-        top: 0;
-        /* Align to the top */
-        right: 0;
-        /* Align to the right inside .main-wrapper */
-    }
-
-    .arrow-button {
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 2vw;
-        height: 2vw;
-        background-color: #f0f0f0;
-        /* Light grey background */
-        border: none;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 1000;
-        transition: transform 0.2s ease-in-out;
-    }
-
-
-
-
-    .arrow-left {
-        left: 5%;
-        /* Position on the left side */
-    }
-
-    .arrow-right {
-        right: 5%;
-        /* Position on the right side */
-    }
-
-    iframe {
-        width: 560px;
-        /* Fixed width */
-        height: 315px;
-        /* Fixed height */
-        border-radius: 10px;
-    }
-
-    /* Sidebar details formatting */
-    .project-sidebar .project-details {
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        gap: 0.5rem 1rem;
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    .phobophobia-header,
-    .project-parasite-header,
-    .disobey-me-header,
-    .revenge-of-the-renter-header,
-    .mechmates-header,
-    .the-news-header,
-    .skill-tree-header,
-    .noorderpoort-header {
-        position: relative;
-        /* Ensure the overlay is positioned correctly */
-        background-size: cover;
-        background-position: center;
-        color: white;
-        /* Make sure text is readable on dark overlay */
-        height: 20vh;
-    }
-
-    .content-wrapper {
-        max-width: calc(var(--recontent-width) - 5vw);
-    }
-
-    .expandable-container {
-        width: 50vw;
-        /* Set a fixed width */
-    }
-}
-
-.text-wrapper {
-    text-align: left;
-}
-
-/* Overlay background */
-#image-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-/* Centered content */
-.overlay-content {
+/* HEADER SECTION */
+.project-header {
     position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: var(--recontent-width);
+    margin: 0 auto; /* Center to match main-wrapper */
+    width: 100%;
+    min-height: 50vh;
+    height: auto;
+    max-height: none; /* Override global header max-height */
+    padding: 10vw 0 6vw 0; /* Increased top padding, added bottom padding */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
-#overlay-image {
-    cursor: zoom-in;
-    transition: transform 0.3s ease-in-out, cursor 0.2s;
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: 10px;
-    position: relative;
-}
-
-/* When zoomed in */
-#overlay-image.zoomed {
-    cursor: zoom-out !important;
-    max-width: none;
-    max-height: none;
-}
-
-/* Close button */
-.close-button {
+.header-overlay {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 40px;
-    height: 40px;
-    background: white;
-    color: black;
-    font-size: 30px;
-    font-weight: bold;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.8) 50%, rgba(10, 10, 10, 0.5) 100%);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: var(--recontent-width);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 0 3vw; /* Increased side padding slightly */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.header-top {
+    margin-bottom: 0;
+}
+
+.back-btn {
+    background: transparent;
     border: none;
+    color: var(--text-color);
+    font-size: 0.9vw;
+    font-weight: 500;
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0;
-    border-radius: 50%;
-    transition: background 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    z-index: 3;
+    gap: 0.5vw;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    padding: 0.6vw 1vw;
+}
+.back-btn:hover {
+    opacity: 1;
+}
+.back-icon {
+    width: 1vw;
+    filter: brightness(0) invert(1);
 }
 
-/* Hover effect */
-.close-button:hover {
-    background: #ff4444;
+.header-main {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.header-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+    max-width: 60%; /* Ensure text doesn't overflow */
+}
+
+.project-type-tag {
+    background: rgba(147, 51, 234, 0.2); /* Purple tint */
+    color: #c084fc;
+    border-radius: 0.3vw;
+    padding: 0.3vw 0.8vw;
+    font-size: 0.7vw;
+    font-weight: 700;
+    width: fit-content;
+    letter-spacing: 0.05em;
+}
+
+.project-title {
+    font-size: 2.8vw;
+    margin: 0;
+    line-height: 1.1;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.project-genre {
+    font-size: 1.2vw;
+    margin: 0;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.project-blurb {
+    font-size: 0.9vw;
+    line-height: 1.5;
+    opacity: 0.8;
+    max-width: 100%;
+    margin: 0;
+}
+
+.project-tags-row {
+    display: flex;
+    gap: 0.8vw;
+    margin-top: 0.5vw;
+    flex-wrap: wrap;
+}
+
+.header-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.4vw 0.8vw;
+    border-radius: 0.5vw;
+    font-size: 0.8vw;
+}
+.header-tag img {
+    width: 0.9vw;
+    height: 0.9vw;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(87%) saturate(2254%) hue-rotate(119deg) brightness(98%) contrast(105%); /* Green filter */
+}
+
+.header-buttons {
+    display: flex;
+    gap: 0.8vw;
+    margin-top: .5vw;
+    flex-wrap: wrap; /* Ensure buttons wrap if there is no space */
+}
+
+.header-buttons a {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    padding: 0.6vw 1.2vw;
+    border-radius: 2vw;
+    font-size: 0.8vw;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent text inside buttons from breaking */
+}
+
+.btn-demo {
+    background-color: #00b57f;
     color: white;
-    transform: scale(1.1);
+}
+.btn-demo:hover {
+    background-color: #009467;
+    transform: translateY(-2px);
+}
+.btn-demo img {
+    width: 0.8vw;
+    filter: brightness(0) invert(1);
+}
+
+.btn-source {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.btn-source:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+    transform: translateY(-2px);
+}
+.btn-source img {
+    width: 0.8vw;
+    filter: brightness(0) invert(1);
+}
+
+.header-trailer {
+    flex: 0 0 38%; /* Sized up slightly from 35% */
+    max-width: 24vw; 
+    aspect-ratio: 16 / 9;
+    border-radius: 1vw;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #000;
 }
 
 
-.project-logo {
-    max-height: 100px;
-    /* Limit the maximum height */
-    width: auto;
-    /* Adjust the width proportionally */
-    display: block;
-    /* Prevent inline element spacing issues */
+/* MAIN LAYOUT */
+.main-wrapper {
+    max-width: var(--recontent-width);
     margin: 0 auto;
-    /* Center the image horizontally */
+    padding: 3vw 0; /* Remove left/right padding since the content handles it, or match header */
 }
 
+.project-layout {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 3vw;
+    align-items: start;
+    padding: 0 1vw; /* Add padding here to align with header-content */
+    box-sizing: border-box;
+}
+
+/* SIDEBAR */
+.project-sidebar {
+    background-color: var(--card-color);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1vw;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    box-sizing: border-box;
+}
+
+.sidebar-section h3 {
+    margin: 0 0 1vw 0;
+    font-size: 1.2vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.details-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.8vw 1vw;
+    margin: 0;
+    font-size: 0.9vw;
+}
+.details-list dt {
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+.details-list dd {
+    margin: 0;
+    color: var(--text-color);
+}
+.detail-icon {
+    width: 1vw;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(87%) saturate(2254%) hue-rotate(119deg) brightness(98%) contrast(105%);
+}
+
+.tech-stack-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+}
+.tech-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5vw;
+    height: 3.5vw;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5vw;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.tech-icon-wrapper img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+html.dark-mode .invert-icon {
+    filter: brightness(0) invert(1);
+}
+
+.links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.links-list a {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9vw;
+    transition: color 0.2s;
+}
+.links-list a:hover {
+    color: #00b57f;
+}
+.links-list a img:not(.external-icon) {
+    width: 1.2vw;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(87%) saturate(2254%) hue-rotate(119deg) brightness(98%) contrast(105%);
+}
+.external-icon {
+    width: 0.8vw;
+    margin-left: auto;
+    filter: brightness(0) invert(0.5);
+}
+
+/* MAIN CONTENT SECTION */
+.content-section {
+    margin-bottom: 3vw;
+}
+.content-section h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 1.5vw;
+    margin: 0 0 1vw 0;
+}
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    margin-bottom: 1vw;
+}
+
+#dynamic-content-placeholder p {
+    font-size: 1vw;
+    line-height: 1.6;
+    margin-bottom: 1vw;
+    margin-left: 0; /* Make sure it's aligned to the left edge */
+    color: rgba(255, 255, 255, 0.8);
+}
+#dynamic-content-placeholder h2 {
+    font-size: 1.8vw;
+    margin: 2vw 0 1vw 0;
+}
+#dynamic-content-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5vw;
+    margin: 1vw 0;
+    display: block;
+}
+
+/* Expandables */
 .expandable-container {
-    margin-bottom: 5px;
+    margin-bottom: 0.5vw;
+    width: 100%;
+}
+.expandable-button {
+    background: var(--card-color);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    padding: 1vw;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 0.5vw;
+    transition: background 0.3s;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1vw;
+}
+.expandable-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.expandable-content {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5vw;
+    border-radius: 0 0 0.5vw 0.5vw;
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+.expand-icon {
+    width: 1vw;
+    transition: transform 0.3s ease;
+}
+.expandable-button.flipped .expand-icon {
+    transform: rotate(180deg);
+}
+.snippet-icon {
+    width: 1.2vw;
+    margin-right: 0.5vw;
 }
 
-/* CODE SNIPPET */
+/* Code Snippets */
 .code-container {
     font-family: Menlo, Consolas, monospace;
     background: #1e1e1e;
     color: #ddd;
     padding: 1rem;
     overflow-x: auto;
-    font-size: 14px;
+    font-size: 0.9vw;
     line-height: 1.4;
-    border-radius: 8px;
+    border-radius: 0.5vw;
+    margin-top: 1vw;
 }
+.code-line { display: flex; }
+.line-number { width: 3em; text-align: right; margin-right: 1em; opacity: 0.4; color: #888; flex-shrink: 0; }
+.line-number+span { white-space: pre-wrap; flex: 1; }
 
-.code-line {
-    display: flex;
+/* Image Overlay (kept just in case) */
+#image-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.8); display: none; align-items: center; justify-content: center; z-index: 1000;
 }
-
-.line-number {
-    width: 3em;
-    /* reserve space for 3-digit lines */
-    text-align: right;
-    margin-right: 1em;
-    user-select: none;
-    opacity: 0.4;
-    color: #888;
-    /* line-number color */
-    flex-shrink: 0;
-}
-
-.line-number+span {
-    white-space: pre-wrap;
-    /* preserve wrapping of code lines */
-    flex: 1;
-}
-
-/* Expandable Button */
-.expandable-button {
-    color: white;
-    border: none;
-    display: flex;
-    padding: 12px;
-    width: 100%;
-    max-height: 8vh;
-    text-align: left;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    box-sizing: border-box;
-
-    align-items: center;
-    /* Vertically center the text + icon */
-    justify-content: space-between;
-    /* Push icon to far right */
-    gap: 0.5em;
-    /* Optional: spacing between text & icon */
-}
-
-.expandable-content {
-    background: var(--expandable-color);
-    padding: 10px;
-    border-radius: 5px;
-    display: none;
-    width: 100%;
-    /* Matches button width */
-    box-sizing: border-box;
-    /* Ensures padding doesn't affect width */
-}
-
-.expandable-content .content-image {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.snippet-icon {
-    height: 2vh;
-    aspect-ratio: 1 / 1;
-    transition: transform 0.3s ease;
-    transform-origin: center;
-}
-
-.expand-icon {
-    margin-left: auto;
-    height: 1vh;
-    aspect-ratio: 1 / 1;
-    transition: transform 0.3s ease;
-    transform-origin: center;
-}
-
-.expandable-button.flipped .expand-icon {
-    transform: rotate(180deg);
-}
+.overlay-content { position: relative; max-width: 90vw; max-height: 90vh; }
+#overlay-image { cursor: zoom-out; max-width: 90vw; max-height: 90vh; border-radius: 1vw; }
+.close-button { position: absolute; top: -1vw; right: -1vw; width: 3vw; height: 3vw; background: white; color: black; font-size: 2vw; border-radius: 50%; border: none; cursor: pointer; }
 
 
-.project-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    /* Two columns: content on the left, sidebar on the right */
-    grid-template-areas:
-        "content sidebar";
-    /* Ensures sidebar is always on the right */
-    gap: 2rem;
-    /* Adds spacing between the sections */
-    align-items: start;
-    /* Aligns items to the top */
-}
-
-/* Align stuff to da left */
-.content-wrapper {
-    grid-area: content;
-    /* Assigns to the content area */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Ensures everything aligns left */
-}
-
-.content-wrapper img {
-    border-radius: 1rem;
-    max-width: 50%;
-}
-
-/* Media container for the iframe */
-.media-container {
-    width: 100%;
-    /* Ensures it stretches within the content */
-    display: flex;
-    justify-content: flex-start;
-    /* Aligns video to the left */
-}
-
-.main-wrapper {
-    position: relative;
-    /* Establishes a positioning context */
-    max-width: var(--recontent-width);
-    /* Adjust to match your layout */
-    margin: 0 auto;
-    /* Center the wrapper */
-    padding: 2rem;
-    /* Ensure content has space */
-
-    display: flex;
-    justify-content: space-between;
-    /* Space out the sidebar and content */
-}
-
-.project-details dt {
-    font-weight: bold;
-    text-align: left;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding-top: 0.1rem;
-    /* Tiny adjustment to align icon with text cap height */
-}
-
-.detail-icon {
-    width: 1.2rem;
-    height: 1.2rem;
-    flex-shrink: 0;
-    /* Optional: add a tint if needed, but white SVGs work well on dark cards */
-}
-
-.project-details dd {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
-/* Social Buttons */
-.social-buttons {
-    display: inline-flex;
-    /* Or inline-block */
-    width: fit-content;
-    max-width: 100%;
-    justify-content: center;
-    gap: 1.25vh;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-}
-
-.social-buttons a {
-    display: inline-flex;
-    position: relative;
-    width: 3.75rem;
-    height: 3.75rem;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    /* White circular background */
-    border-radius: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    /* Ensure the icon stays within the circle */
-}
-
-.social-buttons a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-}
-
-.social-buttons a img {
-    width: 60%;
-    /* Adjust icon size to fit nicely in the circle */
-    height: auto;
-    transition: filter 0.3s ease;
-    /* Smooth transition for filter */
-    filter: brightness(0) saturate(100%);
-    /* This creates a greenish color effect */
-}
-
-.social-buttons a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 .625vw rgba(255, 255, 255, 0.7);
-}
-
-/* Apply filter effect on the image inside the anchor tag when hovering over the button */
-.social-buttons a:hover img {
-    filter: none;
-}
-
-/* Contributions section */
-.contributions {
-    max-width: 100%;
-    word-break: break-word;
-}
-
-
-/* Headers */
-img {
-    max-width: var(--recontent-width);
-}
-
-/* Image centring, max height styling, and white glow */
-.phobophobia-header img,
-.project-parasite-header img,
-.disobey-me-header img,
-.revenge-of-the-renter-header img,
-.mechmates-header img,
-.the-news-header img,
-.skill-tree-header img,
-.noorderpoort-header img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Center the image horizontally and vertically */
-    max-height: 50%;
-    /* Restrict the height to % of the header */
-    width: auto;
-    /* Maintain the aspect ratio */
-    filter: drop-shadow(0 0 1vw rgba(0, 0, 0, 1));
-    margin-top: 3.5vh;
-    z-index: 2;
-}
-
-/* Background for Phobophobia */
-.phobophobia-header {
-    background-image: url('../../assets/images/phobophobia/banner.jpg');
-}
-
-/* Background for Revenge of the Renter */
-.revenge-of-the-renter-header {
-    background-image: url('../../assets/images/revenge-of-the-renter/banner.jpg');
-}
-
-/* Background for Mechmates */
-.mechmates-header {
-    background-image: url('../../assets/images/mechmates/banner.jpg');
-}
-
-/* Background for The News */
-.the-news-header {
-    background-image: url('../../assets/images/the-news/banner.jpg');
-}
-
-/* Background for Noorderpoort Escape Room */
-.noorderpoort-header {
-    background-image: url('../../assets/images/noorderpoort/banner.jpg');
-}
-
-/* Background for Skill Tree */
-.skill-tree-header {
-    background-image: url('../../assets/images/skill-tree/banner.jpg');
-}
-
-/* Background for Project Parasite */
-.project-parasite-header {
-    background-image: url('../../assets/images/project-parasite/banner.jpg');
-}
-
-/* Background for Disobey Me */
-.disobey-me-header {
-    background-image: url('../../assets/images/disobey-me/banner2.jpg');
-}
-
-/* Overlay with slight black */
-.phobophobia-header::before,
-.revenge-of-the-renter-header::before,
-.mechmates-header::before,
-.the-news-header::before,
-.noorderpoort-header::before,
-.skill-tree-header::before,
-.disobey-me-header::before,
-.project-parasite-header::before {
-    content: '';
-    /* Empty content for the pseudo-element */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* Transparent black overlay */
-    z-index: 1;
-    /* Ensure overlay is on top of the background */
-}
-
-/* Ensure text appears above the overlay */
-.phobophobia-header h1,
-.project-parasite-header h1,
-.revenge-of-the-renter-header h1,
-.mechmates-header h1,
-.the-news-header h1,
-.disobey-me-header h1,
-.noorderpoort-header h1,
-.phobophobia-header p,
-.project-parasite-header p,
-.revenge-of-the-renter-header p,
-.mechmates-header p,
-.the-news-header p,
-.noorderpoort-header p,
-.disobey-me-header p,
-.skill-tree-header {
-    position: relative;
-    z-index: 2;
-    /* Ensure text is above the overlay */
-}
-
-/* NAVIGATION ARROWS*/
-.arrow-button:hover {
-    transform: translateY(-50%) scale(1.1);
-    /* Slight zoom on hover */
-}
-
-.arrow-button img {
-    width: 60%;
-    /* Arrow image takes 60% of button size */
-    height: auto;
-    display: block;
-    margin: auto;
-    transition: transform 0.2s ease-in-out;
+/* RESPONSIVE (MOBILE) */
+@media screen and (max-width: 768px) {
+    .header-main { flex-direction: column; }
+    .header-trailer { width: 100%; }
+    .project-layout { grid-template-columns: 1fr; display: flex; flex-direction: column-reverse;}
+    
+    .project-title { font-size: 8vw; }
+    .project-genre { font-size: 4vw; }
+    .project-blurb { font-size: 3.5vw; }
+    .header-tag { font-size: 3vw; padding: 1vw 2vw; }
+    .header-tag img { width: 3vw; height: 3vw; }
+    
+    .btn-demo, .btn-source { font-size: 3vw; padding: 2vw 4vw; }
+    .btn-demo img, .btn-source img { width: 3vw; }
+    .back-btn { font-size: 3vw; }
+    .back-icon { width: 3vw; }
+    
+    .sidebar-section h3 { font-size: 4vw; }
+    .details-list { font-size: 3.5vw; gap: 2vw; }
+    .detail-icon { width: 3.5vw; }
+    .tech-stack-icons img { width: 8vw; height: 8vw; padding: 1vw; }
+    .links-list a { font-size: 3.5vw; }
+    .links-list a img:not(.external-icon) { width: 4vw; }
+    .external-icon { width: 3vw; }
+    
+    #dynamic-content-placeholder p { font-size: 3.5vw; }
+    #dynamic-content-placeholder h2 { font-size: 5vw; }
+    
+    .expandable-button { font-size: 3.5vw; padding: 3vw; }
+    .expand-icon { width: 3vw; }
+    .snippet-icon { width: 4vw; }
+    .code-container { font-size: 3vw; }
 }
