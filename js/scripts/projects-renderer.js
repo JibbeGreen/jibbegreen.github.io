@@ -8,7 +8,7 @@ function cardHTML(p) {
 
     return `
     <div class="project-card" data-tags="${p.tags.join(" ")}">
-        <a href="${p.slug}.html" class="card-link-wrapper">
+        <a href="project.html?id=${p.slug}" class="card-link-wrapper">
             <img src="${p.banner}" alt="${p.title} banner">
             <div class="card-content">
                 <div class="project-type-tag">${typeDisplay}</div>

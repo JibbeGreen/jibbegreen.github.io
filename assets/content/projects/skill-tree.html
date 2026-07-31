@@ -1,114 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <script>
-        if (localStorage.getItem("theme") === "dark") {
-            document.documentElement.classList.add("dark-mode");
-        }
-        let animStart = sessionStorage.getItem("animationStartTime");
-        if (!animStart) {
-            animStart = Date.now();
-            sessionStorage.setItem("animationStartTime", animStart);
-        }
-        const elapsed = (Date.now() - animStart) / 1000;
-        const offset = elapsed % 20;
-        document.write(`<style>header.index-header { animation-delay: -${offset}s !important; }</style>`);
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website of Jibbe Wieman">
-    <title>Jibbe Wieman | Leveling & Skill Tree System</title>
-    <link rel="icon" type="image/svg+xml" href="assets/images/icons/JBW.svg">
-    <link rel="canonical" href="https://jibbegreen.github.io/skill-tree.html" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/components/navigation.css">
-    <link rel="stylesheet" href="css/pages/project-page.css">
-    <link rel="stylesheet" href="css/base/variables.css">
-    <link rel="stylesheet" href="css/base/global.css">
-    <link rel="stylesheet" href="css/components/buttons.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/csharp.min.js"></script>
-    <script>hljs.highlightAll();</script>
-
-        <script type="module" src="/js/scripts/main.js"></script>
-</head>
-
-<body>
-
-    <div id="nav-placeholder"></div>
-
-    <div class="arrow-button arrow-left" onclick="window.location.href='the-news.html';">
-        <img src="assets/images/icons/arrow-left.png" alt="Left Arrow">
-    </div>
-    <div class="arrow-button arrow-right" onclick="window.location.href='noorderpoort.html';">
-        <img src="assets/images/icons/arrow-right.png" alt="Right Arrow">
-    </div>
-
-    <!-- Image Overlay -->
-    <div id="image-overlay">
-        <div class="overlay-content">
-            <span class="close-button" onclick="closeOverlay()">&times;</span>
-            <img id="overlay-image" src="" alt="Enlarged Image">
-        </div>
-    </div>
-
-    <header class="skill-tree-header">
-        <h1 style="z-index: 3;">Levelling & Skill Tree System</h1>
-        <!--<img src="assets/images/skill-tree/banner.g" alt="Project Parasite Logo" />-->
-    </header>
-
-    <div class="main-wrapper">
-        <main>
-            <aside class="project-sidebar">
-                <dl class="project-details">
-                    <dt><img src="assets/images/icons/status.svg" alt="" class="detail-icon">STATUS:</dt>
-                    <dd>COMPLETED</dd>
-                    <dt><img src="assets/images/icons/type.svg" alt="" class="detail-icon">TYPE:</dt>
-                    <dd>UNIVERSITY</dd>
-                    <dt><img src="assets/images/icons/duration.svg" alt="" class="detail-icon">DURATION:</dt>
-                    <dd>9 SEPTEMBER 2024 - 15 NOVEMBER 2024</dd>
-                    <dt><img src="assets/images/icons/tool.png" alt="" class="detail-icon">SOFTWARE USED:</dt>
-                    <dd>UNITY</dd>
-                    <dt><img src="assets/images/icons/languages.svg" alt="" class="detail-icon">LANGUAGES USED:</dt>
-                    <dd>C#</dd>
-                    <dt><img src="assets/images/icons/role.svg" alt="" class="detail-icon">PRIMARY ROLE(S):</dt>
-                    <dd>PROGRAMMER</dd>
-                    <dt><img src="assets/images/icons/team.png" alt="" class="detail-icon">TEAM SIZE:</dt>
-                    <dd>1</dd>
-                </dl>
-            </aside>
-
-            <div class="content-wrapper">
-                <iframe width="560" height="315"
-                    src="https://www.youtube-nocookie.com/embed/BLFn0_QCXWY?si=-gY5nn7Ste0ecsWJ"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
-
-                <br />
-
-                <div class="text-wrapper">
+<div class="text-wrapper">
                     <p>For my university's programming track I focused on programming a levelling system and skill tree,
                         and incorporate that into the existing data base of the Unity Learn FPS game.</p>
                     <p>During this project I learned about software and game design patterns (e.g. Observer, Command),
                         and incorporated some into the system. Besides this I also made a UML Chart for the two systems:
                     </p>
-                </div>
-
-                <br />
-
-                <div class="social-buttons">
-                    <a href="https://github.com/JibbeGreen/LevellingSkillTree" target="_blank" rel="noopener noreferrer"
-                        aria-label="GitHub">
-                        <img src="assets/images/icons/github.png" alt="GitHub Icon" title="GitHub">
-                    </a>
                 </div>
 
                 <br />
@@ -210,12 +105,3 @@
                     </div> <!-- expandable-container -->
 
                 </div> <!-- contributions -->
-            </div><!-- content-wrapper -->
-        </main>
-    </div> <!-- main-wrapper -->
-
-    <div id="footer-placeholder"></div>
-
-</body>
-
-</html>

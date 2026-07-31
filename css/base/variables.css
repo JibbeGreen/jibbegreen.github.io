@@ -1,6 +1,6 @@
 /* WIDE SCREENS */
 :root {
-    --recontent-width: calc(80vw);
+    --recontent-width: calc(clamp(614.4px, 80vw, 3072px));
     /* Define a reusable width */
 
     --background-color: #f0f7f4; /* light minty green */
