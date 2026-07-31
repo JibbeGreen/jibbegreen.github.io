@@ -115,7 +115,7 @@ const projectsData = [
         techIcons: ["unity.svg", "c-sharp.png"]
     },
     {
-        title: "Noorderpoort Escape Room",
+        title: "Noorderpoort Escape",
         slug: "noorderpoort",
         banner: "assets/images/noorderpoort/banner.jpg",
         blurb: "A VR escape-room experience about digital citizenship for a real-world client.",
