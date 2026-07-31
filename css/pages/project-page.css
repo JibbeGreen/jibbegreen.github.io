@@ -325,8 +325,7 @@ html.dark-mode .invert-icon {
 .section-title {
     display: flex;
     align-items: center;
-    gap: clamp(3.8px, 0.5vw, 19.2px);
-    margin-bottom: clamp(7.7px, 1vw, 38.4px);
+    margin-bottom: clamp(7.7px, 0.5vw, 38.4px);
 }
 
 #dynamic-content-placeholder p {
@@ -350,7 +349,7 @@ html.dark-mode .invert-icon {
 
 /* Expandables */
 .expandable-container {
-    margin-bottom: clamp(3.8px, 0.5vw, 19.2px);
+    margin-bottom: clamp(3.8px, 0.1vw, 19.2px);
     width: 100%;
 }
 .expandable-button {
@@ -358,7 +357,7 @@ html.dark-mode .invert-icon {
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
-    padding: clamp(7.7px, 1vw, 38.4px);
+    padding: clamp(7.7px, 0.5vw, 38.4px);
     width: 100%;
     text-align: left;
     cursor: pointer;
