@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark-mode");
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jibbe Wieman | Project</title>
+    <!-- CSS links -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/pages/project-page.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/base/global.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs2015.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/csharp.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <script type="module" src="/js/scripts/main.js"></script>
+    <script type="module" src="/js/scripts/project-renderer.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <header class="project-header" id="project-header">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <div class="header-top">
+                <button class="back-btn" onclick="window.location.href='projects.html'">
+                    ← Back to Projects
+                </button>
+            </div>
+            
+            <div class="header-main">
+                <div class="header-text">
+                    <span class="project-type-tag" id="header-type">TYPE</span>
+                    <h1 class="project-title" id="header-title">TITLE</h1>
+                    <h2 class="project-genre" id="header-genre">GENRE</h2>
+                    <p class="project-blurb" id="header-blurb">BLURB</p>
+                    
+                    <div class="project-tags-row" id="header-tags-row">
+                        <!-- Tags injected here -->
+                    </div>
+                    
+                    <div class="header-buttons" id="header-buttons">
+                        <!-- Buttons injected here -->
+                    </div>
+                </div>
+                
+                <div class="header-trailer" id="header-trailer-container">
+                    <!-- Trailer injected here -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <main class="project-layout">
+            <div class="project-content">
+                <section class="content-section">
+                    <div class="section-title">
+                        <span class="green-dot"></span>
+                        <h3>About the Project</h3>
+                    </div>
+                    <div id="dynamic-content-placeholder">
+                        <p>Loading project details...</p>
+                    </div>
+                </section>
+            </div>
+            
+            <aside class="project-sidebar">
+                <section class="sidebar-section">
+                    <div class="section-title">
+                        <span class="green-dot"></span>
+                        <h3>Project Details</h3>
+                    </div>
+                    <dl class="details-list" id="sidebar-details">
+                        <!-- Details injected here -->
+                    </dl>
+                </section>
+                
+                <section class="sidebar-section">
+                    <div class="section-title">
+                        <span class="green-dot"></span>
+                        <h3>Tech Stack</h3>
+                    </div>
+                    <div class="tech-stack-icons" id="sidebar-tech">
+                        <!-- Tech icons injected here -->
+                    </div>
+                </section>
+                
+                <section class="sidebar-section">
+                    <div class="section-title">
+                        <span class="green-dot"></span>
+                        <h3>Links</h3>
+                    </div>
+                    <ul class="links-list" id="sidebar-links">
+                        <!-- Links injected here -->
+                    </ul>
+                </section>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Image Overlay (kept for zoomed images if needed) -->
+    <div id="image-overlay">
+        <div class="overlay-content">
+            <span class="close-button" onclick="closeOverlay()">&times;</span>
+            <img id="overlay-image" src="" alt="Enlarged Image">
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>
