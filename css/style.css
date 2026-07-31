@@ -2,12 +2,12 @@
 
 #drag-button {
     position: absolute;
-    bottom: 1vw;
-    right: 1vw;
-    width: 8vw;
-    height: 2.5vw;
+    bottom: clamp(7.7px, 1vw, 38.4px);
+    right: clamp(7.7px, 1vw, 38.4px);
+    width: clamp(61.4px, 8vw, 307.2px);
+    height: clamp(19.2px, 2.5vw, 96px);
     background-color: #ffffff;
-    border-radius: 2vw;
+    border-radius: clamp(15.4px, 2vw, 76.8px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,20 +15,20 @@
     z-index: 4;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin-top: auto;
-    margin-bottom: 1vw;
+    margin-bottom: clamp(7.7px, 1vw, 38.4px);
 }
 
 #drag-button img {
-    width: 1.2vw;
-    height: 1.2vw;
+    width: clamp(9.2px, 1.2vw, 46.1px);
+    height: clamp(9.2px, 1.2vw, 46.1px);
     user-select: none;
     pointer-events: none;
-    padding-right: .3vw;
+    padding-right: clamp(2.3px, 0.3vw, 11.5px);
 }
 
 #drag-button p {
     color: black;
-    font-size: 1vw;
+    font-size: clamp(7.7px, 1vw, 38.4px);
 }
 
 /* Header Styles */
@@ -48,7 +48,7 @@ header.index-header {
 
     margin: 0 auto;
     /* Centre the header horizontally */
-    padding: 13vh 2vw 2vw;
+    padding: clamp(78px, 13vh, 280.8px) clamp(15.4px, 2vw, 76.8px) clamp(15.4px, 2vw, 76.8px);
     color: #f7f9f9;
     /* Subtle beige for contrast */
     box-sizing: border-box;
@@ -355,22 +355,22 @@ header.index-header::before {
 .tech-stack-row {
     display: flex;
     align-items: center;
-    gap: 1.5vw;
-    margin-top: 2vh;
+    gap: clamp(11.5px, 1.5vw, 57.6px);
+    margin-top: clamp(12px, 2vh, 43.2px);
     flex-wrap: wrap;
 }
 
 .tech-item {
     display: flex;
     align-items: center;
-    gap: 0.5vw;
-    font-size: 0.9vw;
+    gap: clamp(3.8px, 0.5vw, 19.2px);
+    font-size: clamp(6.9px, 0.9vw, 34.6px);
     font-weight: bold;
     color: var(--text-color);
 }
 
 .tech-item img {
-    height: 1.5vw;
+    height: clamp(11.5px, 1.5vw, 57.6px);
     width: auto;
     object-fit: contain;
 }

@@ -95,10 +95,10 @@
 
     #contact-page-content {
         background-color: rgba(0, 0, 0, 0.8);
-        padding: 1.25vw;
-        max-width: 50vw;
+        padding: clamp(9.6px, 1.25vw, 48px);
+        max-width: clamp(384px, 50vw, 1920px);
         margin: 0 auto;
-        border-radius: 0.625vw;
+        border-radius: clamp(4.8px, 0.625vw, 24px);
         z-index: 1;
         position: relative;
         color: black;
@@ -111,17 +111,17 @@
     }
 
         #contact-page-content p {
-            font-size: 1vw;
+            font-size: clamp(7.7px, 1vw, 38.4px);
         }
 
         #contact-page-content .social-buttons a {
-            width: 3.75vw; /* Adjust button width */
-            height: 3.75vw; /* Adjust button height */
+            width: clamp(28.8px, 3.75vw, 144px); /* Adjust button width */
+            height: clamp(28.8px, 3.75vw, 144px); /* Adjust button height */
         }
 
         .contact-content p {
             margin: 10px 0 20px;
-            font-size: 1vw;
+            font-size: clamp(7.7px, 1vw, 38.4px);
             color: white; /* Make paragraph text white explicitly */
         }
 
@@ -138,7 +138,7 @@
     .social-buttons {
         display: flex;
         justify-content: center;
-        gap: 1.25vh;
+        gap: clamp(7.5px, 1.25vh, 27px);
     }
 
         .social-buttons a {
